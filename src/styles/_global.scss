@@ -1,0 +1,19 @@
+$pink1:#DC468E;
+$pink2:#DE5596;
+$pink3:#FD94C5;
+$pink4:#FFBCDB;
+$bgColor:#331B62;
+$size: 16px;
+$menuSize:3*$size;
+$borderSize: calc($size/3);
+
+@mixin stroke($size, $color) {
+  $minusSize : ($size - 2*$size);
+  /* $strokeColor : invert($fontColor); */
+  text-shadow:
+  $size $size 0 $color,
+  $minusSize $minusSize 0 $color,  
+  $size $minusSize 0 $color,
+  $minusSize $size 0 $color,
+  $size $size 0 $color;
+}
