@@ -2,7 +2,7 @@
   <dl :class="getClass(values)">
     <dt>
       <b>
-        {{values.name}}
+        {{fillByIcon(values.name)}}        
         <span v-if="values.subname">{{values.subname}}</span>
       </b>
     </dt>
@@ -21,13 +21,46 @@ export default {
     values: { type: Object, required: true },
     depth: { type: Number, default: 0 }
   },
+  data(){
+    return{
+      icons : {
+        "malina" : "🍓",
+        "truskawka" : "🍓",
+        "poziomka" : "🍓",
+        "marakuja" : "🍛",
+        "mango" : "🥔",
+        "jagoda" : "🍆",
+        "wiśnia" : "🍒",
+        "morela" : "🥭",
+        "pomarańcza" : "🍊",
+        "liczi" : "🍅",
+        "czekolada" : "🍫",
+        "matcha" : "🥤",
+        "kawa" : "☕️",
+        "wanilia" : "🥢",
+        "mleczny" : "🥛",
+        "kokos" : "🥥",
+        "karmel" : "🧈",
+        "słony karmel" : "🧈",
+        "jabłko" : "🍏",
+        "brzoskwinia" : "🍑",
+        "aloes" : "🌿",
+        "tapioka" : "🧆",
+        "orzech" : "🥜",
+        "biała czekolada" : "🍫",
+      }
+    }
+  },
   methods:{
     getClass(item){
-      console.log(this.depth)
       if(!item.items) return
       if(!item.items[0].items) return 'has-submenu latest d'+this.depth
       return 'has-submenu d'+this.depth
     },
+    fillByIcon( name ){
+      if(!this.icons[name.toLowerCase()]) return name
+      return this.icons[name.toLowerCase()] +" "+ name
+    }
   }
 }
 </script>

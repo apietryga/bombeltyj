@@ -1,13 +1,12 @@
 <template>
   <header>
-    <img src="/logo192.webp" alt="Bombel Tyj Logo">
+    <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
 
   </header>
   <div>
     <BombelMenu :object="object" />
   </div>
 </template>
-
 <script>
 import BombelMenu from './components/BombelMenu.vue'
 
