@@ -28,10 +28,10 @@ export default {
         "truskawka" : "🍓",
         "poziomka" : "🍓",
         "marakuja" : "🍛",
-        "mango" : "🥔",
+        "mango" : "🥭",
         "jagoda" : "🍆",
         "wiśnia" : "🍒",
-        "morela" : "🥭",
+        "morela" : "🍑",
         "pomarańcza" : "🍊",
         "liczi" : "🍅",
         "czekolada" : "🍫",
@@ -70,6 +70,7 @@ export default {
 dl{
   margin:0;
   &.has-submenu {
+    flex:1;
     border-radius:10px;
     border-width: 3px;
     border-style:solid;
@@ -84,6 +85,8 @@ dl{
       border-width: 0 3px 3px 0;
       border-radius:7px 0 7px 0;
       b{
+        display:flex;
+        flex-direction: column;
         color:#fff;
         mix-blend-mode: difference;
         span{
@@ -95,19 +98,25 @@ dl{
     }
     // BODIES
     .item-body{
-      dd{margin:0; }
       display:flex;
+      align-items: flex-start;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
       padding:10px;
       gap:10px;
+      dd{
+        margin:0;
+        display:flex;
+        flex:1;
+      }
     }
     // DEPTH (LAST) LIST ITEM
     &.latest {
       .item-body{
         flex-direction:column;
         background-color:transparent!important;
+        min-width:200px;
       }
     }
   }
@@ -120,9 +129,9 @@ dl{
     background-color:$color;
   }
 }
-.d0{@include colorPack(#D9D9D9)}
-.d1{@include colorPack(#B42268);}
-.d2{@include colorPack(#FFC0CB);}
-.d3{@include colorPack(#0ff);}
-.d4{@include colorPack(#ff0);}
+.d0{@include colorPack($white)}
+.d1{@include colorPack($pink1)}
+.d2{@include colorPack($pink4);}
+.d3{@include colorPack($pink2);}
+.d4{@include colorPack($pink3);}
 </style>

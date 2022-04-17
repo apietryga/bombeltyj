@@ -118,6 +118,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@use '@/styles/_global.scss' as *;
 @font-face {
   font-family: "Bubbleboddy Neue";
   src: url("@/assets/bubblebody.woff2") format("woff2");
@@ -126,11 +127,28 @@ export default {
 *{box-sizing:border-box;}
 body{
   margin:0;
+  background: linear-gradient($pink4, $pink1, $bgColor, $bgColor);
+
   #app {
     font-family: Bubbleboddy Neue, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    > header{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding:1em;
+      background: linear-gradient( #331B62, transparent, transparent, transparent, transparent );
+      img{
+        width:192px;
+        height:192px;
+        border-radius: 50%;
+        box-shadow: .4em .4em 1em rgba(0, 0, 0, 0.8);
+        cursor:pointer;
+      }
+
+    }
   }
 }
 </style>
