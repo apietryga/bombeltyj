@@ -1,15 +1,25 @@
 <template>
+  <article>
+    <OpenDate />
+  </article>
   <header>
-    <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
-
+    <a href="./">
+      <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
+    </a>
   </header>
-  <div>
+  <main>
     <BombelMenu :object="object" />
-  </div>
+  </main>
+  <footer>
+    <p>
+      &copy; Bombel Tyj <span>2022</span>
+    </p>
+
+  </footer>
 </template>
 <script>
 import BombelMenu from './components/BombelMenu.vue'
-
+import OpenDate from './components/OpenDate.vue'
 export default {
   name: 'App',
   data(){
@@ -60,16 +70,6 @@ export default {
               },
             ]
           },
-          // { name: 'SMAK',
-          //   items: [
-          //       { name: 'Orientalne',
-          //       items:[
-          //         { name: 'Truskawka' },
-          //         { name: 'Arbuz' },
-          //       ]
-          //     }
-          //   ]
-          // },
           { name: 'KULKI',
             items: [
               { name: 'OWOCOWE',
@@ -107,6 +107,22 @@ export default {
               {name: 'CZEKOLADA'},
               {name: 'BIAŁA CZEKOLADA'},
             ]
+          },
+          { name: 'REKOMENDOWANE',
+            items:[
+              { name : "ELZA",
+                items:[
+                  {name: ':D'}
+                ]
+
+              },
+              { name : "FRIDA",
+                items:[
+                  {name: ':D'}
+                ]
+              },
+            ]
+
           }
         ]
       }
@@ -114,7 +130,8 @@ export default {
   },
   components: {
     BombelMenu,
-  }
+    OpenDate
+}
 }
 </script>
 <style lang="scss">
@@ -148,6 +165,17 @@ body{
         cursor:pointer;
       }
 
+    }
+
+    > footer{
+      color:#fff;
+      p{
+        margin:.5em;
+        span{
+          font-family:  Avenir, Helvetica, Arial, sans-serif;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

@@ -2,7 +2,15 @@
   <dl :class="getClass(values)">
     <dt>
       <b>
-        {{fillByIcon(values.name)}}        
+        <slot name="name" v-if="fillByIcon(values.name).src">
+          <img :src="fillByIcon(values.name).src" :alt="values.name">
+          {{fillByIcon(values.name).name}}
+        </slot>
+        <slot name="name" v-else>
+          {{fillByIcon(values.name)}}
+          <!-- {{values.name}} -->
+        </slot>
+        <!-- <slot name="name" :value="values.name"></slot> -->
         <span v-if="values.subname">{{values.subname}}</span>
       </b>
     </dt>
@@ -23,28 +31,31 @@ export default {
   },
   data(){
     return{
+      imgError: false,
       icons : {
-        "malina" : "🍓",
+        "malina" : "img",
+        "aloes" : "img",
+        "jagoda" : "img",
+        "jogurt" : "img",
+        "karmel" : "img",
+        "słony karmel" : "img",
+        "liczi" : "img",
+        "marakuja" : "img",
+        "matcha" : "img",
+
         "truskawka" : "🍓",
         "poziomka" : "🍓",
-        "marakuja" : "🍛",
         "mango" : "🥭",
-        "jagoda" : "🍆",
         "wiśnia" : "🍒",
         "morela" : "🍑",
         "pomarańcza" : "🍊",
-        "liczi" : "🍅",
         "czekolada" : "🍫",
-        "matcha" : "🥤",
         "kawa" : "☕️",
         "wanilia" : "🥢",
         "mleczny" : "🥛",
         "kokos" : "🥥",
-        "karmel" : "🧈",
-        "słony karmel" : "🧈",
         "jabłko" : "🍏",
         "brzoskwinia" : "🍑",
-        "aloes" : "🌿",
         "tapioka" : "🧆",
         "orzech" : "🥜",
         "biała czekolada" : "🍫",
@@ -58,8 +69,9 @@ export default {
       return 'has-submenu d'+this.depth
     },
     fillByIcon( name ){
-      if(!this.icons[name.toLowerCase()]) return name
-      return this.icons[name.toLowerCase()] +" "+ name
+      if(this.icons[name.toLowerCase()] == "img") return {name: name, src: '/icons/'+name.toLowerCase()+'.webp'}
+      if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()] + " " + name
+      return name
     }
   }
 }
@@ -74,6 +86,13 @@ dl{
     border-radius:10px;
     border-width: 3px;
     border-style:solid;
+    // IMG AS ICONS
+    img{
+      // border:5px dashed red;
+      width:1.2em;
+      height:1.2em;
+    }
+
     // TITLES
     > dt{
       text-align:center;
@@ -130,8 +149,8 @@ dl{
   }
 }
 .d0{@include colorPack($white)}
-.d1{@include colorPack($pink1)}
-.d2{@include colorPack($pink4);}
-.d3{@include colorPack($pink2);}
-.d4{@include colorPack($pink3);}
+.d1{@include colorPack($pink4)}
+.d2{@include colorPack($pink1)}
+.d3{@include colorPack(rgb(171, 97, 200))}
+.d4{@include colorPack($pink3)}
 </style>
