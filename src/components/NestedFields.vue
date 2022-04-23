@@ -1,78 +1,48 @@
 <template>
   <dl :class="getClass(values)">
     <dt>
-      <b>
-        <slot name="name" v-if="fillByIcon(values.name).src">
-          <img :src="fillByIcon(values.name).src" :alt="values.name">
-          {{fillByIcon(values.name).name}}
-        </slot>
-        <slot name="name" v-else>
-          {{fillByIcon(values.name)}}
-          <!-- {{values.name}} -->
-        </slot>
-        <!-- <slot name="name" :value="values.name"></slot> -->
+      <div class="recommend" v-if="values.img">
+        <img :src="values.img" :alt="values.name">
+        <div v-for="tail of values.tails" :key="tail">
+          <VueIcon :values="{name: tail.ico}" />
+        </div>
+      </div>
+      <b v-else>
+        <VueIcon :values="values" />
         <span v-if="values.subname">{{values.subname}}</span>
       </b>
     </dt>
     <div class="item-body" v-if="values.items">
-      <dd v-for="subItems of values.items" 
-        :key="subItems.name">
+      <dd v-for="subItems of values.items" :key="subItems.name">
+        <div v-if="subItems.price">
+          {{subItems.name}}
+        </div>
         <NestedFields :values="subItems" :depth="depth+1" />
+        <div v-if="subItems.price" class="price">
+          {{subItems.price}}
+        </div>
       </dd>
     </div>
   </dl>
 </template>
 <script>
+import VueIcon from './VueIcon.vue'
 export default {
   name: 'NestedFields',
+  components: {
+    VueIcon,
+  },
   props: {
     values: { type: Object, required: true },
     depth: { type: Number, default: 0 }
   },
-  data(){
-    return{
-      imgError: false,
-      icons : {
-        "malina" : "img",
-        "aloes" : "img",
-        "jagoda" : "img",
-        "jogurt" : "img",
-        "karmel" : "img",
-        "słony karmel" : "img",
-        "liczi" : "img",
-        "marakuja" : "img",
-        "matcha" : "img",
-
-        "truskawka" : "🍓",
-        "poziomka" : "🍓",
-        "mango" : "🥭",
-        "wiśnia" : "🍒",
-        "morela" : "🍑",
-        "pomarańcza" : "🍊",
-        "czekolada" : "🍫",
-        "kawa" : "☕️",
-        "wanilia" : "🥢",
-        "mleczny" : "🥛",
-        "kokos" : "🥥",
-        "jabłko" : "🍏",
-        "brzoskwinia" : "🍑",
-        "tapioka" : "🧆",
-        "orzech" : "🥜",
-        "biała czekolada" : "🍫",
-      }
-    }
-  },
   methods:{
     getClass(item){
+      if(item.class) return item.class
       if(!item.items) return
       if(!item.items[0].items) return 'has-submenu latest d'+this.depth
       return 'has-submenu d'+this.depth
     },
-    fillByIcon( name ){
-      if(this.icons[name.toLowerCase()] == "img") return {name: name, src: '/icons/'+name.toLowerCase()+'.webp'}
-      if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()] + " " + name
-      return name
-    }
   }
 }
 </script>
@@ -86,13 +56,6 @@ dl{
     border-radius:10px;
     border-width: 3px;
     border-style:solid;
-    // IMG AS ICONS
-    img{
-      // border:5px dashed red;
-      width:1.2em;
-      height:1.2em;
-    }
-
     // TITLES
     > dt{
       text-align:center;
@@ -126,7 +89,8 @@ dl{
       gap:10px;
       dd{
         margin:0;
-        display:flex;
+        // display:flex;
+        display:inline;
         flex:1;
       }
     }
@@ -136,6 +100,37 @@ dl{
         flex-direction:column;
         background-color:transparent!important;
         min-width:200px;
+      }
+    }
+  }
+
+  .recommend{
+    // border:2px dashed red;
+    img{
+      max-width:100%;
+    }
+  }
+
+  .price-size{
+    // border:2px dashed red;
+    .item-body{
+      align-items: flex-end;
+      dd{
+        display:flex;
+        flex-direction: column;
+        // border:2px dashed blue;
+        align-items:center;
+        font-size:1.5em;
+        .price{
+          padding:.5em 2em;
+          background-color:$bgColor;
+          color:$pink4;
+          border:4px solid $pink1;
+          font-family: $secondFont;
+          border-radius:10px;
+          font-weight: bold;
+        }
+
       }
     }
   }
@@ -151,6 +146,6 @@ dl{
 .d0{@include colorPack($white)}
 .d1{@include colorPack($pink4)}
 .d2{@include colorPack($pink1)}
-.d3{@include colorPack(rgb(171, 97, 200))}
+.d3{@include colorPack(rgb(184, 9, 155))}
 .d4{@include colorPack($pink3)}
 </style>

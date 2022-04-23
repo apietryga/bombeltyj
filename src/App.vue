@@ -1,24 +1,19 @@
 <template>
-  <article>
-    <OpenDate />
-  </article>
   <header>
     <a href="./">
       <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
     </a>
+    <OpenDate />
   </header>
   <main>
-    <BombelMenu :object="object" />
+    <NestedFields :values="object" />
   </main>
   <footer>
-    <p>
-      &copy; Bombel Tyj <span>2022</span>
-    </p>
-
+    <p> &copy; Bombel Tyj <span>2022</span> </p>
   </footer>
 </template>
 <script>
-import BombelMenu from './components/BombelMenu.vue'
+import NestedFields from './components/NestedFields.vue'
 import OpenDate from './components/OpenDate.vue'
 export default {
   name: 'App',
@@ -98,65 +93,109 @@ export default {
               }            
             ]
           },
-          { name: 'SYROP',
-            subname: 'DODATKI',
+          { name: 'DODATKI',
             items: [
-              {name: 'KARMEL'},
-              {name: 'SŁONY KARMEL'},
-              {name: 'ORZECH'},
-              {name: 'CZEKOLADA'},
-              {name: 'BIAŁA CZEKOLADA'},
+              {
+                name: 'SYROP',
+                items: [
+                  {name: 'KARMEL'},
+                  {name: 'SŁONY KARMEL'},
+                  {name: 'ORZECH'},
+                  {name: 'CZEKOLADA'},
+                  {name: 'BIAŁA CZEKOLADA'},
+                ]
+              }
             ]
           },
           { name: 'REKOMENDOWANE',
             items:[
               { name : "ELZA",
                 items:[
-                  {name: ':D'}
+                  { name: 'Skład',
+                    img: 'elza.webp',
+                    tails: [
+                      { name: 'mleko truskawkowe',
+                        ico: 'truskawka',
+                      },
+                      { name: 'kulki jogurtowe',
+                        ico: 'jogurt'
+                      },
+                      { name: 'syrop karmelowy',
+                        ico: 'karmel',
+                      },
+                    ]
+                  }
                 ]
 
               },
               { name : "FRIDA",
                 items:[
-                  {name: ':D'}
+                  { name: 'Skład',
+                    img: 'frida.webp',
+                    tails: [
+                      { name: 'mleko kawowe',
+                        ico: 'kawa',
+                      },
+                      { name: 'kulki kawowe',
+                        ico: 'kawa'
+                      },
+                      { name: 'syrop karmelowy',
+                        ico: 'karmel',
+                      },
+                    ]
+                  }
                 ]
               },
             ]
+          },
+          { name: 'CENNIK',
+            items:[
+              { name: '',
+                // name: 'ROZMIAR',
+                class: 'price-size',
+                items: [
+                  { name : 'MAŁA',
+                    img: 'small_cup.webp',
+                    price: '10zł',
+                  },
+                  { name : 'DUŻA',
+                    img: 'big_cup.webp',
+                    price: '15zł',
+                  },
+                ]
 
-          }
+              },
+            ]
+          },
         ]
       }
     }
   },
   components: {
-    BombelMenu,
-    OpenDate
-}
+    NestedFields,
+    OpenDate,
+  }
 }
 </script>
 <style lang="scss">
 @use '@/styles/_global.scss' as *;
-@font-face {
-  font-family: "Bubbleboddy Neue";
-  src: url("@/assets/bubblebody.woff2") format("woff2");
-  font-display: block;
-}
 *{box-sizing:border-box;}
 body{
   margin:0;
-  background: linear-gradient($pink4, $pink1, $bgColor, $bgColor);
-
+  @include linearGradient($pink1, $pink1, $bgColor);
+  min-height:100vh;
   #app {
-    font-family: Bubbleboddy Neue, Avenir, Helvetica, Arial, sans-serif;
+    font-family: $firstFont;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    padding:0 .5em;
     > header{
       display:flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding:1em;
-      background: linear-gradient( #331B62, transparent, transparent, transparent, transparent );
+      @extend %simpleBox;      
       img{
         width:192px;
         height:192px;
@@ -164,15 +203,23 @@ body{
         box-shadow: .4em .4em 1em rgba(0, 0, 0, 0.8);
         cursor:pointer;
       }
-
+      @media (max-width:520px){
+        flex-direction: column;
+        align-items: center;
+        h2{
+          text-align:center;
+        }
+      }
     }
 
     > footer{
       color:#fff;
+      @extend %simpleBox;      
+
       p{
         margin:.5em;
         span{
-          font-family:  Avenir, Helvetica, Arial, sans-serif;
+          font-family:  $secondFont;
           font-weight: bold;
         }
       }

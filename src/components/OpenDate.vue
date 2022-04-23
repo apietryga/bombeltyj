@@ -34,6 +34,7 @@ export default {
       hours: 0,
       minutes: 0,
       seconds: 0,
+      date: '01 May 2022 10:00:00 GMT+2'
     }
   },
   mounted() {
@@ -41,17 +42,20 @@ export default {
   },
   methods: {
     getTime() {
-      let now = new Date();
-      let end = Date.parse('01 May 2022 09:00:00 GMT');
-      let diff = end - now;
-      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      this.days = days;
-      this.hours = hours;
-      this.minutes = minutes;
-      this.seconds = seconds;
+      const date = new Date(this.date);
+      const now = new Date();
+      const diff = date.getTime() - now.getTime();
+      if (diff < 0) {
+        this.days = 0;
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+      } else {
+        this.days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        this.hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+        this.minutes = Math.floor(diff / 1000 / 60 % 60);
+        this.seconds = Math.floor(diff / 1000 % 60);
+      }
       setTimeout(() => {
         this.getTime();
       }, 1000);
@@ -60,27 +64,31 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @use '@/styles/_global.scss' as *;
   .openDate{
-    background: linear-gradient($pink1, $pink4);
-    // border:20px dashed red;
-    box-shadow: 0 0 2em $pink4;
-    margin:2em;
-    padding:2em;
+    padding:0 2em;
     text-align:center;
+    h2{
+      text-align:left;
+      font-size:clamp(.8em, 1.5em, 5em);
+    }
     .countdown{
-      font-family:Avenir, Helvetica, Arial, sans-serif;
+      font-family:Arial Black, Arial, sans-serif;
+      font-weight: bold;
       display:flex;
       justify-content: center;
       flex-wrap: wrap;
       .countdown-item{
         display:flex;
-          padding:.5em;
+        padding:.2em;
         >div{
           padding:.1em;
         }
       }
+    }
+    @media only print{
+      display:none;
     }
   }
 </style>
