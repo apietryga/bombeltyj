@@ -4,7 +4,7 @@
 // })
 module.exports = {
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === "production" ? "/bombeltyj/" : "/",
+  // publicPath: process.env.NODE_ENV === "production" ? "/bombeltyj/" : "/",
   devServer: {
     host: 'localhost',
   }
