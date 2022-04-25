@@ -1,5 +1,5 @@
 # BombelTyj
-v. 0.0.1
+  Front-end for Bombel Tyj Restaurant.
 
 <!-- publish to github -->
 git subtree push --prefix dist origin gh-pages

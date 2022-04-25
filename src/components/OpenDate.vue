@@ -74,7 +74,8 @@ export default {
       font-size:clamp(.8em, 1.5em, 5em);
     }
     .countdown{
-      font-family:Arial Black, Arial, sans-serif;
+      // font-family:Arial Black, Arial, sans-serif;
+      font-family:$secondFont;
       font-weight: bold;
       display:flex;
       justify-content: center;
