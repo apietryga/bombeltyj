@@ -2,7 +2,7 @@
   <div class="icon">
     <slot name="name" v-if="fillByIcon(values.name).src">
       <img :src="fillByIcon(values.name).src" :alt="values.name">
-      {{fillByIcon(values.name).name}}
+      <!-- {{fillByIcon(values.name).name}} -->
     </slot>
     <slot name="name" v-else>
       {{fillByIcon(values.name)}}
@@ -24,7 +24,8 @@ export default {
         "liczi" : "img",
         "marakuja" : "img",
         "matcha" : "img",
-
+        "tapioka" : "img",
+        "arbuz" : "🍉",
         "truskawka" : "🍓",
         "poziomka" : "🍓",
         "mango" : "🥭",
@@ -38,7 +39,6 @@ export default {
         "kokos" : "🥥",
         "jabłko" : "🍏",
         "brzoskwinia" : "🍑",
-        "tapioka" : "🧆",
         "orzech" : "🥜",
         "biała czekolada" : "🍫",
       }
@@ -49,9 +49,12 @@ export default {
   },
   methods : {
     fillByIcon( name ){
-      if(this.icons[name.toLowerCase()] == "img") return {name: name, src: 'icons/'+name.toLowerCase()+'.webp'}
-      if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()] + " " + name
-      return name
+      // if(this.icons[name.toLowerCase()] == "img") return {name: name, src: 'icons/'+name.toLowerCase()+'.webp'}
+      if(this.icons[name.toLowerCase()] == "img") return {src: 'icons/'+name.toLowerCase()+'.webp'}
+      // if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()] + " " + name
+      if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
+      // return name
+      return ''
     }
   }
 }

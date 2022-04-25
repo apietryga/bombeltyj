@@ -1,0 +1,137 @@
+{
+  "name": "MENU",
+  "items": [
+    { "name": "BAZA",
+      "items": [
+        { "name": "HERBATA",
+          "items":[
+            { "name": "TRUSKAWKA" },
+            { "name": "ARBUZ" },
+            { "name": "MARAKUJA" },
+            { "name": "MANGO" },
+            { "name": "WIŚNIA" },
+            { "name": "JAGODA" },
+            { "name": "BRZOSKWINIA" },
+            { "name": "POMARAŃCZA" },
+            { "name": "LICZI" },
+            { "name": "MALINA" }
+          ]
+        },
+        { "name": "MLEKO",
+          "items": [
+            { "name": "CZEKOLADA" },
+            { "name": "KAWA" },
+            { "name": "WANILIA" },
+            { "name": "MATCHA" },
+            { "name": "KOKOS" },
+            { "name": "KARMEL" },
+            { "name": "MLECZNY" },
+            { "name": "TRUSKAWKA" },
+            { "name": "MANGO" },
+            { "name": "WIŚNIA" },
+            { "name": "JAGODA" },
+            { "name": "MALINA" }
+          ]
+        }
+      ]
+    },
+    { "name": "KULKI",
+      "items": [
+        { "name": "OWOCOWE",
+          "items":[
+            { "name": "WIŚNIA" },
+            { "name": "TRUSKAWKA" },
+            { "name": "MARAKUJA" },
+            { "name": "MANGO" },
+            { "name": "MALINA" },
+            { "name": "JABŁKO" },
+            { "name": "BRZOSKWINIA" },
+            { "name": "JAGODA" },
+            { "name": "POMARAŃCZA" },
+            { "name": "LICZI" },
+            { "name": "TAPIOKA" }
+          ]
+        },
+        { "name": "DESEROWE",
+          "items":[
+            { "name": "KARMEL" },
+            { "name": "KAWA" },
+            { "name": "JOGURT" },
+            { "name": "ORZECH" }
+          ]
+        }            
+      ]
+    },
+    { "name": "DODATKI",
+      "items": [
+        {
+          "name": "SYROP",
+          "items": [
+            {"name": "SŁONY KARMEL"},
+            {"name": "ORZECH"},
+            {"name": "CZEKOLADA"},
+            {"name": "BIAŁA CZEKOLADA"}
+          ]
+        }
+      ]
+    },
+    { "name": "REKOMENDOWANE",
+      "items":[
+        { "name" : "ELZA",
+          "items":[
+            { "name": "Skład",
+              "img": "elza.webp",
+              "tails": [
+                { "name": "MLEKO TRUSKAWKA",
+                  "ico": "truskawka"
+                },
+                { "name": "KULKI JOGURT",
+                  "ico": "jogurt"
+                },
+                { "name": "SYROP SŁONY KARMEL",
+                  "ico": "karmel"
+                }
+              ]
+            }
+          ]
+
+        },
+        { "name" : "FRIDA",
+          "items":[
+            { "name": "Skład",
+              "img": "frida.webp",
+              "tails": [
+                { "name": "MLEKO KAWA",
+                  "ico": "kawa"
+                },
+                { "name": "KULKI TAPIOKA",
+                  "ico": "tapioka"
+                },
+                { "name": "SYROP KARMEL",
+                  "ico": "karmel"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "name": "CENNIK",
+      "items":[
+        { "name": "",
+          "class": "price-size",
+          "items": [
+            { "name" : "MAŁA",
+              "img": "small_cup.webp",
+              "price": "10zł"
+            },
+            { "name" : "DUŻA",
+              "img": "big_cup.webp",
+              "price": "15zł"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

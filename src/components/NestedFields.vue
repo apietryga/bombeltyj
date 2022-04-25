@@ -3,12 +3,16 @@
     <dt>
       <div class="recommend" v-if="values.img">
         <img :src="values.img" :alt="values.name">
-        <div v-for="tail of values.tails" :key="tail">
+        <div v-for="tail of values.tails" :key="tail" class="imgNameField">
           <VueIcon :values="{name: tail.ico}" />
+          {{tail.name}}
         </div>
       </div>
       <b v-else>
-        <VueIcon :values="values" />
+        <div class="imgNameField">
+          <VueIcon :values="values" />
+          {{values.name}}
+        </div>
         <span v-if="values.subname">{{values.subname}}</span>
       </b>
     </dt>
@@ -62,11 +66,15 @@ dl{
       border:inherit;
       display:inline-block;
       padding:2px 10px;
-      margin-left:-1px;
-      margin-top:-1px;
+      position:relative;
+      // margin-left:-1px;
+      // margin-top:-1px;
+      left:-1px;
+      top:-4px;
       border-width: 0 3px 3px 0;
       border-radius:7px 0 7px 0;
       b{
+
         display:flex;
         flex-direction: column;
         color:#fff;
@@ -102,6 +110,14 @@ dl{
         min-width:200px;
       }
     }
+
+    .imgNameField{
+      // border:0;
+      // border:1px dashed red;
+      display:flex;
+      align-items: center;
+    }
+
   }
 
   .recommend{
