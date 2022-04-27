@@ -1,6 +1,6 @@
 <template>
   <dl :class="getClass(values)">
-    <dt>
+    <dt v-if="values.name">
       <div class="recommend" v-if="values.img">
         <img :src="values.img" :alt="values.name">
         <div v-for="tail of values.tails" :key="tail" class="imgNameField">
@@ -9,6 +9,7 @@
         </div>
       </div>
       <b v-else>
+      <!-- <b v-if="values.name"> -->
         <div class="imgNameField">
           <VueIcon :values="values" />
           {{values.name}}
@@ -45,6 +46,7 @@ export default {
       if(item.class) return item.class
       if(!item.items) return
       if(!item.items[0].items) return 'has-submenu latest d'+this.depth
+      // if(item.name) return 'has-submenu d'+this.depth+' '+item.name.toLowerCase()
       return 'has-submenu d'+this.depth
     },
   }
@@ -57,8 +59,8 @@ dl{
   margin:0;
   &.has-submenu {
     flex:1;
-    border-radius:10px;
-    border-width: 3px;
+    border-radius:.7em;
+    border-width: .3em;
     border-style:solid;
     // TITLES
     > dt{
@@ -67,14 +69,11 @@ dl{
       display:inline-block;
       padding:2px 10px;
       position:relative;
-      // margin-left:-1px;
-      // margin-top:-1px;
-      left:-1px;
-      top:-4px;
-      border-width: 0 3px 3px 0;
-      border-radius:7px 0 7px 0;
+      left:-.1em;
+      top:-.3em;
+      border-width: 0 .3em .3em 0;
+      border-radius:.5em 0 .5em 0;
       b{
-
         display:flex;
         flex-direction: column;
         color:#fff;
@@ -88,16 +87,17 @@ dl{
     }
     // BODIES
     .item-body{
+      // display:inline-block;
       display:flex;
-      align-items: flex-start;
-      flex-direction: row;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      padding:10px;
-      gap:10px;
+      align-items: flex-start;
+      // flex-direction: row;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      padding:.25em;
+      gap:.25em;
       dd{
         margin:0;
-        // display:flex;
         display:inline;
         flex:1;
       }
@@ -110,31 +110,23 @@ dl{
         min-width:200px;
       }
     }
-
     .imgNameField{
-      // border:0;
-      // border:1px dashed red;
       display:flex;
       align-items: center;
     }
-
   }
-
   .recommend{
-    // border:2px dashed red;
     img{
       max-width:100%;
     }
   }
-
   .price-size{
-    // border:2px dashed red;
     .item-body{
       align-items: flex-end;
+      flex-wrap:nowrap;
       dd{
         display:flex;
         flex-direction: column;
-        // border:2px dashed blue;
         align-items:center;
         font-size:1.5em;
         .price{
@@ -146,22 +138,13 @@ dl{
           border-radius:10px;
           font-weight: bold;
         }
-
       }
     }
   }
 }
-// COLORS OF DEPTHS
-@mixin colorPack($color){
-  border-color:$color!important;
-  background-color:rgba($color, .5);
-  > dt{
-    background-color:$color;
-  }
-}
 .d0{@include colorPack($white)}
-.d1{@include colorPack($pink4)}
+.d1{@include colorPack($bgColor)}
 .d2{@include colorPack($pink1)}
-.d3{@include colorPack(rgb(184, 9, 155))}
+.d3{@include colorPack($pink4)}
 .d4{@include colorPack($pink3)}
 </style>

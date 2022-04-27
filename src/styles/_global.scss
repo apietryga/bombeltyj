@@ -38,6 +38,16 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
   -webkit-print-color-adjust: exact !important;
 }
 
+// COLORS OF DEPTHS
+@mixin colorPack($color){
+  border-color:$color!important;
+  background-color:rgba($color, .5);
+  > dt{
+    background-color:$color;
+  }
+}
+
+
 %simpleBox{
   background-color:rgba(255, 255, 255, 0.4);
   border:3px solid #fff;

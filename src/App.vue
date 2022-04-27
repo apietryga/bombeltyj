@@ -8,11 +8,10 @@
   <main>
     <NestedFields :values="object" />
   </main>
-  <footer>
-    <p> &copy; Bombel Tyj <span>2022</span> </p>
-  </footer>
+  <BubbleFooter />
 </template>
 <script>
+import BubbleFooter from './components/BubbleFooter.vue'
 import NestedFields from './components/NestedFields.vue'
 import OpenDate from './components/OpenDate.vue'
 import Menu from './assets/menu.json'
@@ -26,6 +25,7 @@ export default {
   components: {
     NestedFields,
     OpenDate,
+    BubbleFooter,
   }
 }
 </script>
@@ -48,11 +48,11 @@ body{
       align-items: center;
       padding:1em;
       @extend %simpleBox;      
+      // margin:0;
       img{
         width:192px;
         height:192px;
         border-radius: 50%;
-        box-shadow: .4em .4em 1em rgba(0, 0, 0, 0.8);
         cursor:pointer;
       }
       @media (max-width:520px){
@@ -64,18 +64,55 @@ body{
       }
     }
 
-    > footer{
-      color:#fff;
-      @extend %simpleBox;      
+  }
+}
 
-      p{
-        margin:.5em;
-        span{
-          font-family:  $secondFont;
-          font-weight: bold;
+
+
+// PRINT OPTS
+@media only print{
+// @media (max-height:3178px){
+// @media (min-height:3178px){
+  body{
+    background:none;    
+    font-size:1.5vh;
+    header{
+      display:none!important;
+    }
+    #app{
+      // background:$pink1;
+      padding:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction: column;
+      main{
+        flex:1;
+        .d0 {
+          border-radius:0;
+          min-height:100vh;
+          display:flex;
+          align-items:center;
         }
+        .d2{
+          .item-body{
+            flex-wrap:nowrap!important;
+          }
+        }
+      }
+
+
+      footer{
+        border:none;
+        background:transparent;
+        position:absolute;
+        right:0;
+        bottom:1.5em;
+        width:50%;
       }
     }
   }
 }
+
+
+
 </style>

@@ -70,6 +70,7 @@ export default {
     padding:0 2em;
     text-align:center;
     h2{
+      margin:0;
       text-align:left;
       font-size:clamp(.8em, 1.5em, 5em);
     }

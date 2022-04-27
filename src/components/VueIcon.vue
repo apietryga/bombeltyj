@@ -1,8 +1,7 @@
 <template>
   <div class="icon">
     <slot name="name" v-if="fillByIcon(values.name).src">
-      <img :src="fillByIcon(values.name).src" :alt="values.name">
-      <!-- {{fillByIcon(values.name).name}} -->
+      <img :src="fillByIcon(values.name)?.src" :alt="values.name">
     </slot>
     <slot name="name" v-else>
       {{fillByIcon(values.name)}}
@@ -49,11 +48,9 @@ export default {
   },
   methods : {
     fillByIcon( name ){
-      // if(this.icons[name.toLowerCase()] == "img") return {name: name, src: 'icons/'+name.toLowerCase()+'.webp'}
+      if(name == null){return ''}
       if(this.icons[name.toLowerCase()] == "img") return {src: 'icons/'+name.toLowerCase()+'.webp'}
-      // if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()] + " " + name
       if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
-      // return name
       return ''
     }
   }
