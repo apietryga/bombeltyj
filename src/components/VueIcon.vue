@@ -49,6 +49,7 @@ export default {
   methods : {
     fillByIcon( name ){
       if(name == null){return ''}
+      if(name.split(" ").length > 1){ name = name.split(" ")[1] }
       if(this.icons[name.toLowerCase()] == "img") return {src: 'icons/'+name.toLowerCase()+'.webp'}
       if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
       return ''
