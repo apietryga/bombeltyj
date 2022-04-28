@@ -5,8 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
-  },
+    "deploy": "git add . && git status && git commit -m 'deploy' && git push origin master && git checkout gh-pages && git rebase master && git push origin gh-pages && git checkout master"  },
   "dependencies": {
     "core-js": "^3.8.3",
     "sass": "^1.50.0",
