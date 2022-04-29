@@ -14,7 +14,8 @@
 import BubbleFooter from './components/BubbleFooter.vue'
 import NestedFields from './components/NestedFields.vue'
 import OpenDate from './components/OpenDate.vue'
-import Menu from './assets/menu.json'
+// import Menu from './assets/menu.json'
+import Menu from './@/../../public/menu.json'
 export default {
   name: 'App',
   data(){
