@@ -38,17 +38,18 @@ footer{
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
+    font-size:.8em;
     a{
       text-decoration:none;
-      // color:#fff;
       color:inherit;
-      margin:1em;
-      padding:.5em;
+      margin:.5em;
+      padding:.2em;
       display:flex;
       flex-direction:column;
       align-items:center;
+      max-width:20%;
       img{
-        max-width:50%;
+        max-width:80%;
       }
     }
   }

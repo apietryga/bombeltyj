@@ -5,22 +5,22 @@
         <img :src="values.img" :alt="values.name">
         <div v-for="tail of values.tails" :key="tail" class="imgNameField">
           <VueIcon :values="{name: tail.ico}" />
-          {{tail.name}}
+          <span>{{tail.name}}</span>
         </div>
       </div>
       <b v-else>
-      <!-- <b v-if="values.name"> -->
         <div class="imgNameField">
           <VueIcon :values="values" />
           {{values.name}}
+          <span v-if="values.subname">&nbsp;{{values.subname}}</span>
         </div>
-        <span v-if="values.subname">{{values.subname}}</span>
       </b>
     </dt>
     <div class="item-body" v-if="values.items">
       <dd v-for="subItems of values.items" :key="subItems.name">
-        <div v-if="subItems.price">
-          {{subItems.name}}
+        <div v-if="subItems.price" >
+          <div> {{subItems.name}} </div>
+          <div class="subPrice"> {{subItems.subname}} </div>
         </div>
         <NestedFields :values="subItems" :depth="depth+1" />
         <div v-if="subItems.price" class="price">
@@ -130,13 +130,18 @@ dl{
         align-items:center;
         font-size:1.5em;
         .price{
-          padding:.5em 2em;
+          padding:.2em .3em;
           background-color:$bgColor;
           color:$pink4;
           border:4px solid $pink1;
           font-family: $secondFont;
           border-radius:10px;
           font-weight: bold;
+        }
+        .subPrice{
+          font-family:$secondFont;
+          font-size:.5em;
+          text-align:center;
         }
       }
     }

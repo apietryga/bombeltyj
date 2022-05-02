@@ -3,7 +3,8 @@
     <a href="./">
       <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
     </a>
-    <OpenDate />
+    <!-- <OpenDate /> -->
+    <h2>JUŻ OTWARTE!</h2>
   </header>
   <main>
     <NestedFields :values="object" />
@@ -13,7 +14,7 @@
 <script>
 import BubbleFooter from './components/BubbleFooter.vue'
 import NestedFields from './components/NestedFields.vue'
-import OpenDate from './components/OpenDate.vue'
+// import OpenDate from './components/OpenDate.vue'
 // import Menu from './assets/menu.json'
 import Menu from './@/../../public/menu.json'
 export default {
@@ -25,7 +26,7 @@ export default {
   },
   components: {
     NestedFields,
-    OpenDate,
+    // OpenDate,
     BubbleFooter,
   }
 }

@@ -19,11 +19,12 @@ export default {
         "jagoda" : "img",
         "jogurt" : "img",
         "karmel" : "img",
-        "słony karmel" : "img",
+        "s%C5%82ony%20karmel" : "img",
         "liczi" : "img",
         "marakuja" : "img",
         "matcha" : "img",
         "tapioka" : "img",
+        "bia%C5%82a%20czekolada" : "img",        
         "arbuz" : "🍉",
         "truskawka" : "🍓",
         "poziomka" : "🍓",
@@ -39,7 +40,7 @@ export default {
         "jabłko" : "🍏",
         "brzoskwinia" : "🍑",
         "orzech" : "🥜",
-        "biała czekolada" : "🍫",
+        "ananas" : "🍉",
       }
     }
   },
@@ -48,9 +49,9 @@ export default {
   },
   methods : {
     fillByIcon( name ){
+      console.log(encodeURI(name.toLowerCase()))
       if(name == null){return ''}
-      if(name.split(" ").length > 1){ name = name.split(" ")[1] }
-      if(this.icons[name.toLowerCase()] == "img") return {src: 'icons/'+name.toLowerCase()+'.webp'}
+      if(this.icons[encodeURI(name.toLowerCase())] == "img") return {src: 'icons/'+encodeURI(name.toLowerCase())+'.webp'}
       if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
       return ''
     }
