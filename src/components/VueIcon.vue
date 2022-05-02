@@ -40,7 +40,7 @@ export default {
         "jabłko" : "🍏",
         "brzoskwinia" : "🍑",
         "orzech" : "🥜",
-        "ananas" : "🍉",
+        "ananas" : "🍍",
       }
     }
   },
