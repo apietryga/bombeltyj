@@ -49,7 +49,6 @@ export default {
   },
   methods : {
     fillByIcon( name ){
-      console.log(encodeURI(name.toLowerCase()))
       if(name == null){return ''}
       if(this.icons[encodeURI(name.toLowerCase())] == "img") return {src: 'icons/'+encodeURI(name.toLowerCase())+'.webp'}
       if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]

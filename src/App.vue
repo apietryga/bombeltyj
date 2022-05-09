@@ -4,7 +4,11 @@
       <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
     </a>
     <!-- <OpenDate /> -->
-    <h2>JUŻ OTWARTE!</h2>
+    <div class="content">
+      <h1>Bubble Tea Rybnik!</h1>
+      <p>Lokal Bubble Tea po Śląsku</p>
+      <p class="adress">Rybnik, Sobieskiego 13</p>
+    </div>
   </header>
   <main>
     <NestedFields :values="object" />
@@ -56,6 +60,13 @@ body{
         height:192px;
         border-radius: 50%;
         cursor:pointer;
+      }
+      .content{
+        padding:0 1em;
+        h2{margin-bottom:0;}
+        .adress{
+          font-family: $secondFont;
+        }
       }
       @media (max-width:520px){
         flex-direction: column;
