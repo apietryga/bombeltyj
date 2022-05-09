@@ -4,6 +4,7 @@
       "name": "MENU",
       "items":[
         { "name": "WYBIERZ BAZĘ",
+          "s_name": "base",
           "items": [
             { "name": "HERBATA",
               "items":[
@@ -38,6 +39,7 @@
           ]
         },
         { "name": "WYBIERZ KULKI",
+          "s_name": "base",
           "items": [
             { "name": "OWOCOWE",
               "items":[
@@ -64,6 +66,7 @@
           ]
         },
         { "name": "WYBIERZ DODATKI",
+          "s_name": "base",
           "items": [
             {
               "name": "SYROP",

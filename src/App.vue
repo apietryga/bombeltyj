@@ -1,9 +1,8 @@
 <template>
   <header>
     <a href="./">
-      <img src="@/assets/logo192.webp" alt="Bombel Tyj Logo">
+      <img src="/logo192.webp" alt="Bombel Tyj Logo">
     </a>
-    <!-- <OpenDate /> -->
     <div class="content">
       <h1>Bubble Tea Rybnik!</h1>
       <p>Lokal Bubble Tea po Śląsku</p>
@@ -63,9 +62,12 @@ body{
       }
       .content{
         padding:0 1em;
-        h2{margin-bottom:0;}
+        h1,p{margin:0;}
         .adress{
+          margin:.5em 0;
           font-family: $secondFont;
+          font-weight: bold;
+          font-size: .8em;
         }
       }
       @media (max-width:520px){

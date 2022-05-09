@@ -14,11 +14,11 @@
         <span>@bombeltyj</span>
       </a>
       <a href="https://bombeltyj.pl">
-        <img src="@/assets/logo192.webp" alt="bombeltyj on web">
+        <img src="/logo192.webp" alt="bombeltyj on web">
         <span>bombeltyj.pl</span>
       </a>
     </div>
-    <p> &copy; Bombel Tyj <span>2022</span> </p>
+    <p> &copy; Bombel Tyj 2022 </p>
   </footer>
 </template>
 
@@ -36,7 +36,9 @@ footer{
   .socials{
     font-family:$secondFont;
     display:flex;
-    justify-content: center;
+    // justify-content: center;
+    padding:0 10vw;
+    justify-content: space-evenly;
     flex-wrap:wrap;
     font-size:.8em;
     a{
@@ -47,7 +49,8 @@ footer{
       display:flex;
       flex-direction:column;
       align-items:center;
-      max-width:20%;
+      justify-content: center;
+      max-width:10vw;
       img{
         max-width:80%;
       }
@@ -56,12 +59,9 @@ footer{
 
   p{
     margin:.5em;
-    text-align: right;
-    // padding:0 .5em;
-    span{
-      font-family:  $secondFont;
-      font-weight: bold;
-    }
+    text-align: center;
+    font-family:  $secondFont;
+    font-weight: bold;
   }
 }
 </style>
