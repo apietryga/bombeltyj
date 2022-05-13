@@ -13,7 +13,7 @@
                 { "name": "MARAKUJA" },
                 { "name": "MANGO" },
                 { "name": "WIŚNIA" },
-                { "name": "JAGODA" },
+                { "name": "WINOGRONO" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "ANANAS" },
                 { "name": "LICZI" },
@@ -39,7 +39,7 @@
           ]
         },
         { "name": "WYBIERZ KULKI",
-          "s_name": "base",
+          "s_name": "kulki",
           "items": [
             { "name": "OWOCOWE",
               "items":[
@@ -48,10 +48,11 @@
                 { "name": "MARAKUJA" },
                 { "name": "MANGO" },
                 { "name": "MALINA" },
-                { "name": "JABŁKO" },
+                { "name": "KIWI" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "JAGODA" },
                 { "name": "POMARAŃCZA" },
+                { "name": "ALOES", "subname": "(miąższ)" },
                 { "name": "LICZI" }
               ]
             },
@@ -59,8 +60,7 @@
               "items":[
                 { "name": "KARMEL", "subname": "(żelki)" },
                 { "name": "KAWA", "subname": "(żelki)" },
-                { "name": "JOGURT" },
-                { "name": "ORZECH" }
+                { "name": "JOGURT" }
               ]
             }            
           ]

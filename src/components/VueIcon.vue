@@ -41,6 +41,8 @@ export default {
         "brzoskwinia" : "🍑",
         "orzech" : "🥜",
         "ananas" : "🍍",
+        "winogrono" : "🍇",
+        "kiwi" : "🥝",
       }
     }
   },
