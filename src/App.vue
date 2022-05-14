@@ -1,7 +1,7 @@
 <template>
   <header>
     <a href="./">
-      <img src="/logo192.webp" alt="Bombel Tyj Logo">
+      <img src="/bombeltyj_logo.svg" alt="Bombel Tyj Logo">
     </a>
     <div class="content">
       <h1>Bubble Tea Rybnik!</h1>
@@ -17,8 +17,6 @@
 <script>
 import BubbleFooter from './components/BubbleFooter.vue'
 import NestedFields from './components/NestedFields.vue'
-// import OpenDate from './components/OpenDate.vue'
-// import Menu from './assets/menu.json'
 import Menu from './@/../../public/menu.json'
 export default {
   name: 'App',
