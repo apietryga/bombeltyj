@@ -172,8 +172,8 @@ dl{
   }
 }
 .d0{@include colorPack($white)}
-.d1{@include colorPack($bgColor)}
-.d2{@include colorPack($pink1)}
-.d3{@include colorPack($pink4)}
+.d1{@include colorPack($bgColor); dt b {font-size:1.6em;}}
+.d2{@include colorPack($pink1); dt b {font-size:1.4em;}}
+.d3{@include colorPack($pink4); dt b {font-size:1em;}}
 .d4{@include colorPack($pink3)}
 </style>

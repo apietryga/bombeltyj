@@ -1,4 +1,6 @@
 <template>
+  <PreLoader />
+
   <header>
     <a href="./">
       <img src="bombeltyj_logo.svg" alt="Bombel Tyj Logo" fetchpriority="high" />
@@ -19,6 +21,7 @@
 <script>
 import BubbleFooter from './components/BubbleFooter.vue'
 import NestedFields from './components/NestedFields.vue'
+import PreLoader from './components/PreLoader.vue'
 import Menu from './@/../../public/menu.json'
 export default {
   name: 'App',
@@ -30,6 +33,7 @@ export default {
   components: {
     NestedFields,
     BubbleFooter,
+    PreLoader
   }
 }
 </script>
