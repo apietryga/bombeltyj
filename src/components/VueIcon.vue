@@ -1,7 +1,7 @@
 <template>
   <div class="icon">
     <slot name="name" v-if="fillByIcon(values.name).src">
-      <img :src="fillByIcon(values.name)?.src" :alt="values.name">
+      <img :src="fillByIcon(values.name)?.src" :alt="values.name" @error="err">
     </slot>
     <slot name="name" v-else>
       {{fillByIcon(values.name)}}
@@ -11,51 +11,19 @@
 
 <script>
 export default {
-  data(){
-    return {
-      icons : {
-        "malina" : "img",
-        "aloes" : "img",
-        "jagoda" : "img",
-        "jogurt" : "img",
-        "karmel" : "img",
-        "s%C5%82ony%20karmel" : "img",
-        "liczi" : "img",
-        "marakuja" : "img",
-        "matcha" : "img",
-        "tapioka" : "img",
-        "bia%C5%82a%20czekolada" : "img",
-        "wanilia" : "img", 
-        "arbuz" : "🍉",
-        "truskawka" : "🍓",
-        "poziomka" : "🍓",
-        "mango" : "🥭",
-        "wiśnia" : "🍒",
-        "morela" : "🍑",
-        "pomarańcza" : "🍊",
-        "czekolada" : "🍫",
-        "kawa" : "☕️",
-        "mleczny" : "🥛",
-        "kokos" : "🥥",
-        "jabłko" : "🍏",
-        "brzoskwinia" : "🍑",
-        "orzech" : "🥜",
-        "ananas" : "🍍",
-        "winogrono" : "🍇",
-        "kiwi" : "🥝",
-      }
-    }
-  },
   props: {
     values: { type: Object, required: true },
   },
   methods : {
     fillByIcon( name ){
       if(name == null){return ''}
-      if(this.icons[encodeURI(name.toLowerCase())] == "img") return {src: 'icons/'+encodeURI(name.toLowerCase())+'.webp'}
-      if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
-      return ''
-    }
+      // console.log(name)
+      return { src: 'icons/'+encodeURI(name.toLowerCase())+'.svg' }
+      // if(this.icons[encodeURI(name.toLowerCase())] == "img") return {src: 'icons/'+encodeURI(name.toLowerCase())+'.webp'}
+      // if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
+      // return ''
+    },
+    err(e){ e.target.src = 'icons/bombeltyj.svg' }
   }
 }
 </script>

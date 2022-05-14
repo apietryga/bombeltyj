@@ -10,7 +10,7 @@
       </div>
       <b v-else>
         <div class="imgNameField">
-          <VueIcon :values="values" />
+          <VueIcon :values="values" v-if="depth > 3" />
           {{values.name}}
           <span v-if="values.subname">&nbsp;{{values.subname}}</span>
         </div>
