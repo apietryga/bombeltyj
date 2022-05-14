@@ -1,12 +1,14 @@
 <template>
   <header>
     <a href="./">
-      <img src="/bombeltyj_logo.svg" alt="Bombel Tyj Logo">
+      <img src="bombeltyj_logo.svg" alt="Bombel Tyj Logo" fetchpriority="high" />
     </a>
     <div class="content">
-      <h1>Bubble Tea Rybnik!</h1>
-      <p>Lokal Bubble Tea po Śląsku</p>
-      <p class="adress">Rybnik, Sobieskiego 13</p>
+      <h1>BOMBEL TYJ</h1>
+      <h2>Bubble Tea Rybnik</h2>
+      <p>"Śląskie smaki w Bombel Tyju <br /> bo robione na byfyju!"</p>
+      <p class="adress"> Rybnik, Sobieskiego 13 </p>
+      <a href="https://www.google.com/maps/dir//bombel+tyj/" target="_blank">Kaj to mocie?</a>
     </div>
   </header>
   <main>
@@ -27,7 +29,6 @@ export default {
   },
   components: {
     NestedFields,
-    // OpenDate,
     BubbleFooter,
   }
 }
@@ -50,8 +51,7 @@ body{
       justify-content: flex-start;
       align-items: center;
       padding:1em;
-      @extend %simpleBox;      
-      // margin:0;
+      @extend %simpleBox;
       img{
         width:192px;
         height:192px;
@@ -60,7 +60,7 @@ body{
       }
       .content{
         padding:0 1em;
-        h1,p{margin:0;}
+        h1,h2,p{margin:0;}
         .adress{
           margin:.5em 0;
           font-family: $secondFont;
@@ -80,12 +80,8 @@ body{
   }
 }
 
-
-
 // PRINT OPTS
 @media only print{
-// @media (max-height:3178px){
-// @media (min-height:3178px){
   body{
     background:none;    
     font-size:1.5vh;
@@ -93,7 +89,6 @@ body{
       display:none!important;
     }
     #app{
-      // background:$pink1;
       padding:0;
       min-height:100vh;
       display:flex;
@@ -112,8 +107,6 @@ body{
           }
         }
       }
-
-
       footer{
         border:none;
         background:transparent;
@@ -125,7 +118,4 @@ body{
     }
   }
 }
-
-
-
 </style>

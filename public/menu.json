@@ -89,12 +89,12 @@
               "items": [
                 { "name" : "MAŁA",
                   "subname": "250ml",
-                  "img": "small_cup.webp",
+                  "img": "img/menu/small_cup.webp",
                   "price": "10zł"
                 },
                 { "name" : "DUŻA",
                   "subname": "500ml",
-                  "img": "big_cup.webp",
+                  "img": "img/menu/big_cup.webp",
                   "price": "15zł"
                 }
               ]
@@ -105,8 +105,9 @@
           "items":[
             { "name" : "ELZA",
               "items":[
-                { "name": "Skład",
-                  "img": "elza.webp",
+                { "name": "ELZA",
+                  "class": "recommendedIMG",
+                  "img": "img/menu/elza.webp",
                   "tails": [
                     { "name": "MLEKO TRUSKAWKA",
                       "ico": "truskawka"
@@ -124,8 +125,9 @@
             },
             { "name" : "FRIDA",
               "items":[
-                { "name": "Skład",
-                  "img": "frida.webp",
+                { "name": "FRIDA",
+                  "class": "recommendedIMG",
+                  "img": "img/menu/frida.webp",
                   "tails": [
                     { "name": "MLEKO KAWA",
                       "ico": "kawa"

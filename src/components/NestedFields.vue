@@ -2,7 +2,9 @@
   <dl :class="getClass(values)">
     <dt v-if="values.name">
       <div class="recommend" v-if="values.img">
-        <img :src="values.img" :alt="values.name">
+        <div class="imgField">
+          <img :src="values.img" :alt="values.name" :class="values.class || escapeSpecialChars(values.name)">
+        </div>
         <div v-for="tail of values.tails" :key="tail" class="imgNameField">
           <VueIcon :values="{name: tail.ico}" />
           <span>{{tail.name}}</span>
@@ -16,7 +18,7 @@
         </div>
       </b>
     </dt>
-    <div class="item-body" v-if="values.items">
+    <div :class="'item-body '+values?.name?.toLowerCase()" v-if="values.items">
       <dd v-for="subItems of values.items" :key="subItems.name">
         <div v-if="subItems.price" >
           <div> {{subItems.name}} </div>
@@ -49,6 +51,9 @@ export default {
       // if(item.name) return 'has-submenu d'+this.depth+' '+item.name.toLowerCase()
       return 'has-submenu d'+this.depth
     },
+    escapeSpecialChars(str) {
+      return str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+    }
   }
 }
 </script>
@@ -65,12 +70,10 @@ dl{
     // TITLES
     > dt{
       text-align:center;
-      border:inherit;
       display:inline-block;
       padding:2px 10px;
-      position:relative;
-      left:-.1em;
-      top:-.3em;
+      margin-left:-.1em;
+      margin-top:-.3em;
       border-width: 0 .3em .3em 0;
       border-radius:.5em 0 .5em 0;
       b{
@@ -87,13 +90,9 @@ dl{
     }
     // BODIES
     .item-body{
-      // display:inline-block;
       display:flex;
       flex-wrap: wrap;
       align-items: flex-start;
-      // flex-direction: row;
-      // flex-direction: column;
-      // justify-content: flex-start;
       padding:.25em;
       gap:.25em;
       dd{
@@ -115,9 +114,23 @@ dl{
       align-items: center;
     }
   }
+  .rekomendowane .item-body > dd{
+    width:100%;
+  }
   .recommend{
-    img{
-      max-width:100%;
+    .imgField{
+      flex:1;
+      width:100%;
+      text-align:center;
+      @media only print{
+        img{
+          max-width:100%;
+        }
+      }
+      .recommendedIMG{
+        width:10em;
+        height:8em;
+      }
     }
   }
   .price-size{
@@ -142,6 +155,17 @@ dl{
           font-family:$secondFont;
           font-size:.5em;
           text-align:center;
+        }
+        img{
+          // &:nth-child(1){
+          &.maa{
+            width:4em;
+            height:5em;
+          }
+          &.dua{
+            width:4em;
+            height:6em;
+          }
         }
       }
     }

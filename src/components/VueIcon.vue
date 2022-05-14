@@ -17,13 +17,9 @@ export default {
   methods : {
     fillByIcon( name ){
       if(name == null){return ''}
-      // console.log(name)
-      return { src: 'icons/'+encodeURI(name.toLowerCase())+'.svg' }
-      // if(this.icons[encodeURI(name.toLowerCase())] == "img") return {src: 'icons/'+encodeURI(name.toLowerCase())+'.webp'}
-      // if(this.icons[name.toLowerCase()]) return this.icons[name.toLowerCase()]
-      // return ''
+      return { src: 'img/icons/'+encodeURI(name.toLowerCase())+'.svg' }
     },
-    err(e){ e.target.src = 'icons/bombeltyj.svg' }
+    err(e){ e.target.src = 'img/icons/bombeltyj.svg' }
   }
 }
 </script>
@@ -31,10 +27,8 @@ export default {
 <style lang="scss" scoped>
   // IMG AS ICONS
   img{
-    // border:5px dashed red;
     width:1.2em;
     height:1.2em;
+    margin-right: .2em;
   }
-
-
 </style>

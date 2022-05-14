@@ -2,47 +2,33 @@
   <footer>
     <div class="socials">
       <a href="https://www.facebook.com/bombeltyj" target="_blank">
-        <img src="/socials/facebook.webp" alt="bombeltyj on facebook">
-        <span>@bombeltyj</span>
+        <img src="img/socials/facebook.svg" alt="bombeltyj on facebook">
       </a>
       <a href="https://www.instagram.com/bombeltyj" target="_blank">
-        <img src="/socials/instagram.webp" alt="bombeltyj on instagram">
-        <span>@bombeltyj</span>
+        <img src="img/socials/instagram.svg" alt="bombeltyj on instagram">
       </a>
       <a href="https://www.tiktok.com/@bombeltyj" target="_blank">
-        <img src="/socials/tiktok.webp" alt="bombeltyj on tiktok">
-        <span>@bombeltyj</span>
+        <img src="img/socials/tiktok.svg" alt="bombeltyj on tiktok">
       </a>
       <a href="https://bombeltyj.pl">
-        <img src="/logo192.webp" alt="bombeltyj on web">
-        <span>bombeltyj.pl</span>
+        <img src="bombeltyj_logo.svg" alt="bombeltyj on web">
       </a>
     </div>
     <p> &copy; Bombel Tyj 2022 </p>
   </footer>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss">
 @use '@/styles/_global.scss' as *;
 footer{
-  // color:#fff;
-  @extend %simpleBox;      
   .socials{
+    @extend %simpleBox;      
     font-family:$secondFont;
     display:flex;
-    // justify-content: center;
-    padding:0 10vw;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap:wrap;
     font-size:.8em;
     a{
-      text-decoration:none;
       color:inherit;
       margin:.5em;
       padding:.2em;
@@ -50,18 +36,21 @@ footer{
       flex-direction:column;
       align-items:center;
       justify-content: center;
-      max-width:10vw;
       img{
-        max-width:80%;
+        width:5em;
+        height:5em;
+        border-radius:.8em;
       }
     }
   }
-
   p{
     margin:.5em;
-    text-align: center;
+    text-align: right;
     font-family:  $secondFont;
     font-weight: bold;
+    @media only screen {    
+      color:#fff;
+    }
   }
 }
 </style>
