@@ -143,6 +143,49 @@
               ]
             }
           ]
+        },
+        { "name": "SEZONOWE",
+          "items":[
+            { "name" : "KAWA MROŻONA",
+              "items":[
+                { "name": "KAWA MROŻONA",
+                  "class": "recommendedIMG",
+                  "img": "img/menu/kawa_mrozona.webp",
+                  "tails": [
+                    { "name": "KOSTKI LODU",
+                      "ico": "lód"
+                    },
+                    { "name": "SPIENIONE MLEKO",
+                      "ico": "mleko"
+                    },
+                    { "name": "ESPRESSO",
+                      "ico": "kawa"
+                    }
+                  ]
+                }
+              ]
+    
+            },
+            { "name" : "MATCHA MROŻONA",
+              "items":[
+                { "name": "MATCHA MROŻONA",
+                  "class": "recommendedIMG",
+                  "img": "img/menu/matcha_mrozona.webp",
+                  "tails": [
+                    { "name": "KOSTKI LODU",
+                      "ico": "lód"
+                    },
+                    { "name": "SPIENIONE MLEKO",
+                      "ico": "mleko"
+                    },
+                    { "name": "MATCHA",
+                      "ico": "matcha"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }

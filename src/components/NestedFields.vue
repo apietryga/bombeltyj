@@ -114,7 +114,8 @@ dl{
       align-items: center;
     }
   }
-  .rekomendowane .item-body > dd{
+  // .rekomendowane .item-body > dd{
+  .latest dd{
     width:100%;
   }
   .recommend{
@@ -122,6 +123,7 @@ dl{
       flex:1;
       width:100%;
       text-align:center;
+      // border:5px dashed red;
       @media only print{
         img{
           max-width:100%;
@@ -170,6 +172,9 @@ dl{
       }
     }
   }
+  // .imgField{
+  //   border:5px dashed red;
+  // }
 }
 .d0{@include colorPack($white)}
 .d1{@include colorPack($bgColor); dt b {font-size:1.6em;}}

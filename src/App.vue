@@ -111,14 +111,14 @@ body{
           }
         }
       }
-      footer{
-        border:none;
-        background:transparent;
-        position:absolute;
-        right:0;
-        bottom:1.5em;
-        width:50%;
-      }
+      // footer{
+      //   border:none;
+      //   background:transparent;
+      //   position:absolute;
+      //   right:0;
+      //   bottom:1.5em;
+      //   width:50%;
+      // }
     }
   }
 }

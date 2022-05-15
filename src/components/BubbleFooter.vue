@@ -52,5 +52,25 @@ footer{
       color:#fff;
     }
   }
+  @media only print{
+    // display:fixed;
+    // bottom:0;
+    // right: 0;
+    // border:10px dashed red;
+    // footer{
+      border:none;
+      background:transparent;
+      .socials{
+        border:none;
+        background:transparent;
+      }
+      // position:absolute;
+      position:fixed;
+      right:.5em;
+      bottom:.5em;
+      width:50%;
+      // width:fit-content;
+    // }
+  }
 }
 </style>
