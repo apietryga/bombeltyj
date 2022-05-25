@@ -15,7 +15,6 @@
                 { "name": "WIŚNIA" },
                 { "name": "WINOGRONO" },
                 { "name": "BRZOSKWINIA" },
-                { "name": "JABŁKO" },
                 { "name": "LICZI" },
                 { "name": "MALINA" }
               ]
@@ -28,7 +27,6 @@
                 { "name": "MATCHA" },
                 { "name": "KOKOS" },
                 { "name": "KARMEL" },
-                { "name": "MLEKO" },
                 { "name": "TRUSKAWKA" },
                 { "name": "MANGO" },
                 { "name": "WIŚNIA" },
@@ -50,7 +48,6 @@
                 { "name": "KIWI" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "JAGODA" },
-                { "name": "POMARAŃCZA" },
                 { "name": "ALOES", "subname": "(miąższ)" },
                 { "name": "LICZI" }
               ]
