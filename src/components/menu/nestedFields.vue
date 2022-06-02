@@ -20,11 +20,11 @@
     </dt>
     <div :class="'item-body '+values?.name?.toLowerCase()" v-if="values.items">
       <dd v-for="subItems of values.items" :key="subItems.name">
+        <NestedFields :values="subItems" :depth="depth+1" />
         <div v-if="subItems.price" >
           <div> {{subItems.name}} </div>
           <div class="subPrice"> {{subItems.subname}} </div>
         </div>
-        <NestedFields :values="subItems" :depth="depth+1" />
         <div v-if="subItems.price" class="price">
           {{subItems.price}}
         </div>
@@ -114,7 +114,6 @@ dl{
       align-items: center;
     }
   }
-  // .rekomendowane .item-body > dd{
   .latest dd{
     width:100%;
   }
@@ -141,17 +140,17 @@ dl{
       flex-wrap:nowrap;
       dd{
         display:flex;
-        flex-direction: column;
-        align-items:center;
+        color:#fff;
         font-size:1.5em;
+        align-items:center;
+        flex-direction: column;
         .price{
-          padding:.2em .3em;
-          background-color:$bgColor;
-          color:$pink4;
-          border:4px solid $pink1;
-          font-family: $secondFont;
-          border-radius:10px;
+          margin:.5rem;
           font-weight: bold;
+          padding:.2em .3em;
+          border-radius:10px;
+          font-family: $secondFont;
+          background-color:$bgColor;
         }
         .subPrice{
           font-family:$secondFont;
@@ -159,7 +158,6 @@ dl{
           text-align:center;
         }
         img{
-          // &:nth-child(1){
           &.maa{
             width:4em;
             height:5em;
@@ -172,13 +170,10 @@ dl{
       }
     }
   }
-  // .imgField{
-  //   border:5px dashed red;
-  // }
 }
-.d0{@include colorPack($white)}
+.d0{@include colorPack($white);}
 .d1{@include colorPack($bgColor); dt b {font-size:1.6em;}}
-.d2{@include colorPack($pink1); dt b {font-size:1.4em;}}
+.d2{@include colorPack(rgb(58, 5, 49)); dt b {font-size:1.4em;}}
 .d3{@include colorPack($pink4); dt b {font-size:1em;}}
 .d4{@include colorPack($pink3)}
 </style>
