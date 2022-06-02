@@ -56,7 +56,7 @@
               "items":[
                 { "name": "KARMEL", "subname": "(żelki)" },
                 { "name": "KAWA", "subname": "(żelki)" },
-                { "name": "JOGURT" }
+                { "name": "KOKOS" }
               ]
             }            
           ]
@@ -90,9 +90,9 @@
                   "price": "10zł"
                 },
                 { "name" : "DUŻA",
-                  "subname": "500ml",
+                  "subname": "400ml",
                   "img": "img/menu/big_cup.webp",
-                  "price": "15zł"
+                  "price": "14zł"
                 }
               ]
             }
@@ -100,20 +100,20 @@
         },
         { "name": "REKOMENDOWANE",
           "items":[
-            { "name" : "ELZA",
+            { "name" : "HAJER",
               "items":[
-                { "name": "ELZA",
+                { "name": "HAJER",
                   "class": "recommendedIMG",
-                  "img": "img/menu/elza.webp",
+                  "img": "img/menu/hajer.webp",
                   "tails": [
-                    { "name": "MLEKO TRUSKAWKA",
-                      "ico": "truskawka"
+                    { "name": "HERBATA WINOGRONO",
+                      "ico": "winogrono"
                     },
-                    { "name": "KULKI JOGURT",
-                      "ico": "jogurt"
+                    { "name": "KULKI JAGODA",
+                      "ico": "jagoda"
                     },
-                    { "name": "SYROP SŁONY KARMEL",
-                      "ico": "karmel"
+                    { "name": "KULKI ALOES",
+                      "ico": "aloes"
                     }
                   ]
                 }

@@ -8,26 +8,14 @@
 
 <script>
 export default {
+  name: 'preLoader',
   mounted(){
-    // document.body.onload = () => {
-    //   this.$refs.preloader.style.opacity = 0;
-    //   setTimeout(() => {
-    //     this.$refs.preloader.style.display = 'none';
-    //   }, 700);
-    //   // this.$refs.preloader.style.display = 'none'
-    //   // this.$refs.preloader.style.cssText = 'opacity: 0;'
-    // }
-
-    document.onreadystatechange = () => {
-      if (document.readyState == "complete") {
-        this.$refs.preloader.style.opacity = 0;
-        setTimeout(() => {
-          this.$refs.preloader.style.display = 'none';
-        }, 1200);
-
-      }
-    }
-
+    this.$nextTick(() => {
+      setTimeout(() => { 
+      this.$refs.preloader.classList.add("hidding")
+        setTimeout(() => { this.$refs.preloader.style.display = 'none'; }, 500)
+      }, 500);
+    })
   }
 }
 </script>
@@ -40,6 +28,7 @@ export default {
   .preloader{
     top:0;
     left:0;
+    opacity:1;
     z-index:1;
     width:100%;
     height:100%;
@@ -47,6 +36,10 @@ export default {
     transition:1s;
     position:fixed;
     background-color:$pink4;
+    &.hidding{
+      opacity:0;
+      transition:1s;
+    }
     .loader{
       margin:auto;
       border-radius:50%;

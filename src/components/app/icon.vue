@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'appIcon',
   props: {
     values: { type: Object, required: true },
   },

@@ -1,0 +1,39 @@
+<template>
+  <div class="review">
+    <router-link to="/">WRÓĆ</router-link>
+    <h3>Twoja opinia ma znaczenie! 🧐</h3>
+    <p>
+      Będziemy szalenie 😵 wdzięczni, jeśli podzielisz się z nami swoią opinią:
+    </p>
+    <div class="links">
+      <a
+        href="https://g.page/r/Cc1Y69uPvYbbEB0/review"
+        target="_blank"
+      >w opiniach Google</a>
+      lub
+      <a
+        href="https://www.facebook.com/bombeltyj/reviews/"
+        target="_blank"
+      >na Facebooku</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "pageReview"
+}
+</script>
+
+<style lang="scss" scoped>
+@use '@/styles/_global.scss' as *;
+.review{
+    @extend %simpleBox;
+    padding:2rem;
+
+
+}
+
+
+
+</style>

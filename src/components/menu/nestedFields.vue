@@ -6,13 +6,13 @@
           <img :src="values.img" :alt="values.name" :class="values.class || escapeSpecialChars(values.name)">
         </div>
         <div v-for="tail of values.tails" :key="tail" class="imgNameField">
-          <VueIcon :values="{name: tail.ico}" />
+          <appIcon :values="{name: tail.ico}" />
           <span>{{tail.name}}</span>
         </div>
       </div>
       <b v-else>
         <div class="imgNameField">
-          <VueIcon :values="values" v-if="depth > 3" />
+          <appIcon :values="values" v-if="depth > 3" />
           {{values.name}}
           <span v-if="values.subname">&nbsp;{{values.subname}}</span>
         </div>
@@ -33,11 +33,11 @@
   </dl>
 </template>
 <script>
-import VueIcon from './VueIcon.vue'
+import appIcon from '../app/icon.vue'
 export default {
-  name: 'NestedFields',
+  name: 'nestedFields',
   components: {
-    VueIcon,
+    appIcon,
   },
   props: {
     values: { type: Object, required: true },
