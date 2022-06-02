@@ -171,7 +171,10 @@ dl{
     }
   }
 }
-.d0{@include colorPack($white);}
+.d0{
+  @include colorPack($white);
+  align-items: flex-start;
+}
 .d1{@include colorPack($bgColor); dt b {font-size:1.6em;}}
 .d2{@include colorPack(rgb(58, 5, 49)); dt b {font-size:1.4em;}}
 .d3{@include colorPack($pink4); dt b {font-size:1em;}}
