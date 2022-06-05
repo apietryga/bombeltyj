@@ -21,7 +21,7 @@ export default defineComponent({
     product: { type: Object, required: true },
   },
 
-  setup() {
+  setup(props) {
 
     const siteData = reactive({
       title: `ELZA`,
