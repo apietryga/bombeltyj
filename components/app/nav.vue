@@ -34,7 +34,7 @@ export default { name: "appNav" }
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/_global.scss' as *;
+@use '../../assets/style/global' as *;
 nav{
   display:flex;
   justify-content: flex-start;
@@ -103,7 +103,6 @@ nav{
       padding:.25rem;
     }
   }
-
   label{
     cursor:pointer;
     z-index:2;
@@ -130,13 +129,11 @@ nav{
       position:relative;
     }
   }
-
   #toggler:checked ~ 
   {
     .links{
       transform: translateX(0);
     }
-
     label{
       div{
         transition:1s;
@@ -155,6 +152,4 @@ nav{
     }
   }
 }
-
-
 </style>

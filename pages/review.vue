@@ -33,20 +33,13 @@ export default {
   // setup () {
   //   useMeta({ title: 'OPINIA' })
   // },
-
-
 }
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/_global.scss' as *;
+@use '../assets/style/global' as *;
 .review{
     @extend %simpleBox;
     padding:2rem;
-
-
 }
-
-
-
 </style>

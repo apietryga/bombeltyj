@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/_global.scss' as *;
+@use '../../assets/style/global' as *;
 .el{
   border:.3rem solid $pink4;
   border-radius:.7rem;
@@ -85,7 +85,6 @@ export default {
             height:200px;            
           }
         }
-
       }
       
       &.horizontal{
