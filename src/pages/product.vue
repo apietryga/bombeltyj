@@ -11,22 +11,57 @@
 </template>
 
 <script>
-import { useMeta } from 'vue-meta'
-export default {
+// import { useMeta } from 'vue-meta'
+import { defineComponent, computed, reactive } from 'vue'
+import { useHead } from '@vueuse/head'
+
+export default defineComponent({
   name: 'pageProduct',
   props: {
     product: { type: Object, required: true },
   },
-  setup (props) {
-    console.log(props.product)
-    useMeta({ 
-      title: props.product.name,
-      ['og-image']: location.origin + '/' + props.product.img,
-      ['og-title']: props.product.name,
-      // ['og-description']: props.product.description,
+
+  setup() {
+    const siteData = reactive({
+      title: `ELZA`,
+      description: `A beautiful princess`,
+    })
+
+    useHead({
+      // Can be static or computed
+      title: computed(() => siteData.title),
+      meta: [
+        {
+          name: `description`,
+          content: computed(() => siteData.description),
+        },
+      ],
     })
   },
-}
+})
+
+// export default {
+//   name: 'pageProduct',
+//   props: {
+//     product: { type: Object, required: true },
+//   },
+//   // setup (props) {
+//   //   console.log(props.product)
+//   //   useMeta({ 
+//   //     title: props.product.name,
+//   //     ['og-image']: location.origin + '/' + props.product.img,
+//   //     ['og-title']: props.product.name,
+//   //     // ['og-description']: props.product.description,
+//   //   })
+//   // },
+//   head: {
+//     title: 'Product',
+//     meta: [
+//       { name: 'application-name', content: 'Name of my application' },
+//       { name: 'description', content: 'A description of the page', id: 'desc' }
+//     ]
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>

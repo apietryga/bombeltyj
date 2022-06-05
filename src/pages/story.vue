@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import { useMeta } from 'vue-meta'
+// import { useMeta } from 'vue-meta'
 export default { 
   name: "appStory",
-  setup () {
-    useMeta({ title: 'STORY' })
-  },
+  // setup () {
+  //   useMeta({ title: 'STORY' })
+  // },
 
 }
 </script>

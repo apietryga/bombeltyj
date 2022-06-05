@@ -9,9 +9,11 @@ import { MotionPlugin } from '@vueuse/motion'
 // console.log("vue", Vue)
 
 import VueFacebook from 'vue-facebook';
+// import VueHead from 'vue-head'
 // import VueMeta from 'vue-meta'
-import { createMetaManager } from 'vue-meta'
+// import { createMetaManager } from 'vue-meta'
 
+import { createHead } from '@vueuse/head'
 
 import App from './App.vue'
 
@@ -47,11 +49,17 @@ const router = createRouter({
   ]
 })
 
+const head = createHead()
+
 const app = createApp(App)
   .use(VueFacebook)
   .use(MotionPlugin)
+  // .use(VueHead)
+  
+  .use(head)
+
   .use(router)
-  .use(createMetaManager())
+  // .use(createMetaManager())
 
   .component('storyProduct', storyProduct)
   .component('appIcon', appIcon)

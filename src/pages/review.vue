@@ -27,12 +27,12 @@
 </template>
 
 <script>
-import { useMeta } from 'vue-meta'
+// import { useMeta } from 'vue-meta'
 export default {
   name: "pageReview",
-  setup () {
-    useMeta({ title: 'OPINIA' })
-  },
+  // setup () {
+  //   useMeta({ title: 'OPINIA' })
+  // },
 
 
 }
