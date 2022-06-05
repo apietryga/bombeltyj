@@ -22,9 +22,12 @@ export default defineComponent({
   },
 
   setup() {
+
     const siteData = reactive({
       title: `ELZA`,
       description: `A beautiful princess`,
+      ['og-image']: location.origin + '/' + props.product.img,
+      ['og-title']: "ELZA ZIOM",
     })
 
     useHead({
@@ -34,6 +37,14 @@ export default defineComponent({
         {
           name: `description`,
           content: computed(() => siteData.description),
+        },
+        {
+          name: `og-image`,
+          content: computed(() => siteData['og-image']),
+        },
+        {
+          name: `og-title`,
+          content: computed(() => siteData['og-title']),
         },
       ],
     })
