@@ -11,12 +11,21 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
 export default {
   name: 'pageProduct',
   props: {
     product: { type: Object, required: true },
   },
-
+  setup (props) {
+    console.log(props.product)
+    useMeta({ 
+      title: props.product.name,
+      ['og-image']: location.origin + '/' + props.product.img,
+      ['og-title']: props.product.name,
+      // ['og-description']: props.product.description,
+    })
+  },
 }
 </script>
 

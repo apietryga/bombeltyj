@@ -1,4 +1,11 @@
 <template>
+
+  <metainfo>
+    <template v-slot:title="{ content }">
+        {{ content ? `${content} | BOMBEL TYJ` : `BOMBEL TYJ` }}
+    </template>
+  </metainfo>
+
   <preLoader />
   <appNav />
   <routerView v-slot="{ Component, route }" >
@@ -16,12 +23,20 @@
 import appNav from './components/app/nav'
 import appFooter from './components/app/footer'
 import preLoader from './components/app/preLoader'
+import { useMeta } from 'vue-meta'
+
 export default {
   name: 'App',
   components: {
     appFooter,
     appNav,
     preLoader
+  },
+  setup () {
+    useMeta({
+      title: '',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
   }
 }
 </script>

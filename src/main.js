@@ -1,9 +1,18 @@
+// import Vue from 'vue/dist/vue.esm-bundler';
+// import Vue from 'vue';
 import { createApp } from 'vue/dist/vue.esm-bundler';
 import { createRouter, createWebHistory } from 'vue-router'
 import { MotionPlugin } from '@vueuse/motion'
+
+
+// import Vue from 'vue'
+// console.log("vue", Vue)
+
 import VueFacebook from 'vue-facebook';
- 
-// Vue.use(VueFacebook)
+// import VueMeta from 'vue-meta'
+import { createMetaManager } from 'vue-meta'
+
+
 import App from './App.vue'
 
 import menu from './pages/menu.vue'
@@ -16,6 +25,9 @@ import products from '../public/products.json'
 
 import storyProduct from './components/story/product.vue'
 import appIcon from './components/app/icon.vue'
+
+// import { useMeta } from 'vue-meta'
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -36,15 +48,17 @@ const router = createRouter({
 })
 
 const app = createApp(App)
+  .use(VueFacebook)
+  .use(createMetaManager())
+  .use(MotionPlugin)
+  .use(router)
 
+  .component('storyProduct', storyProduct)
+  .component('appIcon', appIcon)
+  // .component('appIcon', appIcon)
+  // .use(useMeta)
 
-app.component('storyProduct', storyProduct);
-app.component('appIcon', appIcon);
-
-app.config.globalProperties.$products = products;
-
-app.use(VueFacebook)
-
-app.use(MotionPlugin)
-app.use(router)
+// app.config.globalFunctions.useMeta = useMeta
+// app.config.globalProperties.$useMeta = useMeta
+app.config.globalProperties.$products = products
 app.mount('#app')

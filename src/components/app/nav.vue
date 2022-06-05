@@ -9,14 +9,14 @@
         <p class="adress"> Rybnik, Sobieskiego 13 </p>
       </a>
     </div>
-    <!-- <input type="checkbox" id="toggler" >
+    <input type="checkbox" id="toggler" >
     <label for="toggler">
       <div></div>
       <div></div>
       <div></div>
-    </label> -->
+    </label>
     <ul class="links">
-      <!-- <li>
+      <li>
         <routerLink to="/">MENU</routerLink>
       </li>
       <li>
@@ -24,7 +24,7 @@
       </li>
       <li>
         <routerLink to="/story">KATALOG BOMBLÓW</routerLink>
-      </li> -->
+      </li>
     </ul>
   </nav>
 </template>
@@ -73,7 +73,6 @@ nav{
   .links{
     flex:1;
     display:flex;
-    // flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     margin:0;
@@ -106,6 +105,7 @@ nav{
   }
 
   label{
+    cursor:pointer;
     z-index:2;
     transition:.5s;
     display:flex !important;
