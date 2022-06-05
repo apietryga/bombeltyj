@@ -2,7 +2,7 @@
   <section>
     <storyProduct :name="product.name" />
     <div class="comments">
-      :D
+      :DEV:
       <fb-comment 
         url="https://www.businessinsider.com/personal-finance/lost-money-following-bad-investing-advice-youtube-2022-6" 
       />
