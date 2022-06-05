@@ -2,16 +2,16 @@
   <footer>
     <div class="socials">
       <a href="https://www.facebook.com/bombeltyj" target="_blank">
-        <img src="img/socials/facebook.svg" alt="bombeltyj on facebook">
+        <img src="/img/socials/facebook.svg" alt="bombeltyj on facebook">
       </a>
       <a href="https://www.instagram.com/bombeltyj" target="_blank">
-        <img src="img/socials/instagram.svg" alt="bombeltyj on instagram">
+        <img src="/img/socials/instagram.svg" alt="bombeltyj on instagram">
       </a>
       <a href="https://www.tiktok.com/@bombeltyj" target="_blank">
-        <img src="img/socials/tiktok.svg" alt="bombeltyj on tiktok">
+        <img src="/img/socials/tiktok.svg" alt="bombeltyj on tiktok">
       </a>
       <a href="https://bombeltyj.pl">
-        <img src="bombeltyj_logo.svg" alt="bombeltyj on web">
+        <img src="/bombeltyj_logo.svg" alt="bombeltyj on web">
       </a>
     </div>
     <p> &copy; Bombel Tyj 2022 </p>
@@ -27,6 +27,8 @@
 <style lang="scss">
 @use '@/styles/_global.scss' as *;
 footer{
+  bottom:0;
+  position: relative;
   .socials{
     display:flex;
     flex-wrap:wrap;
@@ -34,6 +36,10 @@ footer{
     @extend %simpleBox;      
     font-family:$secondFont;
     justify-content: center;
+    
+    border-radius: 1rem 1rem 0 0;
+    border-width: 3px 0 0 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), transparent);
     a{
       margin:.5em;
       padding:.2em;

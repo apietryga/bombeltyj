@@ -1,18 +1,26 @@
 <template>
   <preLoader />
-  <appHeader />
-  <routerView />
+  <appNav />
+  <routerView v-slot="{ Component, route }" >
+    <transition name="slide" mode="out-in" >
+      <component 
+        :is="Component" 
+        :key="route.path"  
+        class="mainComponent"
+      />
+    </transition>
+  </routerView>
   <appFooter />
 </template>
 <script>
-import appHeader from './components/app/header'
+import appNav from './components/app/nav'
 import appFooter from './components/app/footer'
 import preLoader from './components/app/preLoader'
 export default {
   name: 'App',
   components: {
     appFooter,
-    appHeader,
+    appNav,
     preLoader
   }
 }
@@ -20,6 +28,21 @@ export default {
 
 <style lang="scss">
 @use '@/styles/_global.scss' as *;
+
+// animations
+.slide{
+  &-enter-active,
+  &-leave-active{
+    transition: all 0.5s ease;
+  }
+  &-enter-from {
+    opacity: 0;
+  }
+  &-leave-to {
+    opacity: 0;
+  }
+}
+
 body{
   margin:0;
   @include linearGradient($pink1, $pink1, $bgColor);
@@ -29,7 +52,10 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    padding:0 .5em;
+    height:100%;
+    .mainComponent{
+      padding:0 .5em;
+    }
   }
 }
 
@@ -38,7 +64,7 @@ body{
   body{
     background:none;    
     font-size:1.5vh;
-    header{
+    nav{
       display:none!important;
     }
     #app{
@@ -48,11 +74,12 @@ body{
       flex-direction: column;
       main{
         flex:1;
+        padding:0!important;
         .d0 {
           border-radius:0;
           min-height:100vh;
           display:flex;
-          align-items:center;
+          align-items:flex-start;
         }
         .d2{
           .item-body{

@@ -1,22 +1,18 @@
 <template>
   <main>
-    <nestedFields :values="object" />
+    <nestedFields :values="data" />
   </main>
 </template>
 
 <script>
 import nestedFields from '../components/menu/nestedFields.vue'
-import Menu from '../@/../../public/menu.json'
 export default {
   name: 'pageMenu',
-  data(){
-   
-    return {
-      object: Menu
-    }
+  props: {
+    data: { type: Object, required: true },
   },
   components: {
     nestedFields,
-  }
+  },
 }
 </script>

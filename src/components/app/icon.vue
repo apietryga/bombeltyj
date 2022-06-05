@@ -18,9 +18,9 @@ export default {
   methods : {
     fillByIcon( name ){
       if(name == null){return ''}
-      return { src: 'img/icons/'+encodeURI(name.toLowerCase())+'.svg' }
+      return { src: '/img/icons/'+encodeURI(name.toLowerCase())+'.svg' }
     },
-    err(e){ e.target.src = 'img/icons/bombeltyj.svg' }
+    err(e){ e.target.src = '/img/icons/bombeltyj.svg' }
   }
 }
 </script>
