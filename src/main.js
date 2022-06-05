@@ -49,9 +49,9 @@ const router = createRouter({
 
 const app = createApp(App)
   .use(VueFacebook)
-  .use(createMetaManager())
   .use(MotionPlugin)
   .use(router)
+  .use(createMetaManager())
 
   .component('storyProduct', storyProduct)
   .component('appIcon', appIcon)
