@@ -1,5 +1,5 @@
 <template>
-  <div class="el">
+  <routerLink class="el" :to="'/story/' +  vals.name">
     <figure>
       <div class="heading">
         <h4 class="title"> {{ vals.name }} </h4>
@@ -16,11 +16,10 @@
         </figcaption>
       </div>
     </figure>
-  </div>
+  </routerLink>
 </template>
 
 <script>
-import appIcon from '../app/icon.vue'
 export default {
   name: 'storyProduct',
   data(){
@@ -32,9 +31,6 @@ export default {
     return {
       vals : this.values
     }
-  },
-  components: {
-    appIcon
   },
   props: {
     name: { type: String },

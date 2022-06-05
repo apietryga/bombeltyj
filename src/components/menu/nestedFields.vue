@@ -33,12 +33,8 @@
   </dl>
 </template>
 <script>
-import appIcon from '../app/icon.vue'
 export default {
   name: 'nestedFields',
-  components: {
-    appIcon,
-  },
   props: {
     values: { type: Object, required: true },
     depth: { type: Number, default: 0 }

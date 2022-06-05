@@ -1,6 +1,9 @@
 import { createApp } from 'vue/dist/vue.esm-bundler';
 import { createRouter, createWebHistory } from 'vue-router'
 import { MotionPlugin } from '@vueuse/motion'
+import VueFacebook from 'vue-facebook';
+ 
+// Vue.use(VueFacebook)
 import App from './App.vue'
 
 import menu from './pages/menu.vue'
@@ -12,6 +15,7 @@ import data from '../public/menu.json'
 import products from '../public/products.json'
 
 import storyProduct from './components/story/product.vue'
+import appIcon from './components/app/icon.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -35,8 +39,11 @@ const app = createApp(App)
 
 
 app.component('storyProduct', storyProduct);
+app.component('appIcon', appIcon);
 
 app.config.globalProperties.$products = products;
+
+app.use(VueFacebook)
 
 app.use(MotionPlugin)
 app.use(router)

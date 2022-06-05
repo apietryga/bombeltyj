@@ -1,26 +1,22 @@
 <template>
   <nav>
-    <!-- <a href="./"> -->
     <routerLink to="/">
       <img src="/bombeltyj_logo.svg" alt="Bombel Tyj Logo" fetchpriority="high" />
     </routerLink>
-    <!-- </a> -->
     <div class="content">
       <h1>BOMBEL TYJ</h1>
-      <!-- <h2>Bubble Tea Rybnik</h2> -->
       <a href="https://www.google.com/maps/dir//bombel+tyj/" target="_blank">
         <p class="adress"> Rybnik, Sobieskiego 13 </p>
       </a>
     </div>
-    <!-- <input type="checkbox" id="toggler" checked> -->
-    <input type="checkbox" id="toggler" >
+    <!-- <input type="checkbox" id="toggler" >
     <label for="toggler">
       <div></div>
       <div></div>
       <div></div>
-    </label>
+    </label> -->
     <ul class="links">
-      <li>
+      <!-- <li>
         <routerLink to="/">MENU</routerLink>
       </li>
       <li>
@@ -28,7 +24,7 @@
       </li>
       <li>
         <routerLink to="/story">KATALOG BOMBLÓW</routerLink>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </template>

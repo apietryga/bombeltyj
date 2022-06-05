@@ -1,10 +1,13 @@
 <template>
-  <div>
-    PRODUCT!!!!
-    {{ product?.name }}
-    <storyProduct :name="product?.name" />
-
-  </div>
+  <section>
+    <storyProduct :name="product.name" />
+    <div class="comments">
+      :D
+      <fb-comment 
+        url="https://www.businessinsider.com/personal-finance/lost-money-following-bad-investing-advice-youtube-2022-6" 
+      />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -17,6 +20,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+section{
+  display:flex;
+  border:2px dashed red;
+  .comments{
+    border:2px dashed blue;
+    flex:1;
+  }
+
+}
 
 </style>
