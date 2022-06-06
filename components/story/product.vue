@@ -20,33 +20,32 @@
 </template>
 
 <script>
+import products from '@/static/products.json'; // :TODO: put it to store!
 export default {
   name: 'storyProduct',
   data(){
-    if( !this.values){
-      return {
-        vals : this.getValuesByName(this.name)
-      }
-    }
     return {
-      vals : this.values
+      vals : !this.values ? this.getValuesByName(this.name) : this.values,
     }
   },
   props: {
-    name: { type: String },
+    name: { type: String, default : ":NAME:" },
+    // values: { default: false },
     values: { default: false },
     horizontal: { type: Boolean, default: false }
   },
   methods:{
     getValuesByName(name){
-      return this.$products.find(item => item.name.toLowerCase() === name.toLowerCase())
+      // console.log("NAME : ", name)
+      // return this.$products.find(item => item.name.toLowerCase() === name.toLowerCase())
+      return products.find(item => item.name.toLowerCase() === name.toLowerCase())
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/_global.scss' as *;
+@use '../../assets/style/global' as *;
 .el{
   border:.3rem solid $pink4;
   border-radius:.7rem;
@@ -85,7 +84,6 @@ export default {
             height:200px;            
           }
         }
-
       }
       
       &.horizontal{

@@ -5,7 +5,8 @@
         <div class="imgField">
           <img :src="values.img" :alt="values.name" :class="values.class || escapeSpecialChars(values.name)">
         </div>
-        <div v-for="tail of values.tails" :key="tail" class="imgNameField">
+        <!-- <div v-for="tail of values.tails" :key="tail" class="imgNameField"> -->
+        <div v-for="(tail, index) of values.tails" :key="index" class="imgNameField">
           <appIcon :values="{name: tail.ico}" />
           <span>{{tail.name}}</span>
         </div>
@@ -18,9 +19,12 @@
         </div>
       </b>
     </dt>
-    <div :class="'item-body '+values?.name?.toLowerCase()" v-if="values.items">
-      <dd v-for="subItems of values.items" :key="subItems.name">
-        <NestedFields :values="subItems" :depth="depth+1" />
+    <!-- <div :class="'item-body '+values?.name?.toLowerCase()" v-if="values.items"> -->
+    <div class="item-body" v-if="values.items">
+      <!-- <dd v-for="(subItems, index) of values.items" :key="subItems.name"> -->
+      <dd v-for="(subItems) of values.items" :key="values.name+'_i_'+subItems.name">
+        <menuField :values="subItems" :depth="depth+1" :key="values.name+'_'+subItems.name" />
+        <!-- <menuField :values="subItems" :depth="depth+1" /> -->
         <div v-if="subItems.price" >
           <div> {{subItems.name}} </div>
           <div class="subPrice"> {{subItems.subname}} </div>
@@ -32,12 +36,12 @@
     </div>
   </dl>
 </template>
+
 <script>
 export default {
-  name: 'nestedFields',
   props: {
     values: { type: Object, required: true },
-    depth: { type: Number, default: 0 }
+    depth: { type: Number, default: 0 },
   },
   methods:{
     getClass(item){
@@ -50,11 +54,13 @@ export default {
     escapeSpecialChars(str) {
       return str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
     }
-  }
+  },
+
 }
 </script>
+
 <style lang="scss">
-@use '@/styles/_global.scss' as *;
+@use '../../assets/style/global' as *;
 // NESTED STYLES
 dl{
   margin:0;

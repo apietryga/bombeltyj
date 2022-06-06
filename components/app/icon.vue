@@ -1,17 +1,17 @@
 <template>
   <div class="icon">
     <slot name="name" v-if="fillByIcon(values.name).src">
-      <img :src="fillByIcon(values.name)?.src" :alt="values.name" @error="err">
+      <img 
+        :src="`${fillByIcon(values.name).src}`" 
+      >
     </slot>
     <slot name="name" v-else>
       {{fillByIcon(values.name)}}
     </slot>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'appIcon',
   props: {
     values: { type: Object, required: true },
   },
@@ -24,7 +24,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
   // IMG AS ICONS
   img{

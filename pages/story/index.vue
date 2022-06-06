@@ -29,12 +29,11 @@ export default {
   // setup () {
   //   useMeta({ title: 'STORY' })
   // },
-
 }
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/_global.scss' as *;
+@use '@/assets/style/global' as *;
 .stories{
   @extend %simpleBox;
   padding:2rem;

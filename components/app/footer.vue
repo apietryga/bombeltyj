@@ -25,7 +25,7 @@
 </script>
 
 <style lang="scss">
-@use '@/styles/_global.scss' as *;
+@use '../../assets/style/global' as *;
 footer{
   bottom:0;
   position: relative;
