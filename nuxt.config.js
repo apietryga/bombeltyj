@@ -1,6 +1,17 @@
+import products from './static/products.json';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+
+  generate : {
+    routes: products.map( product => {
+      return {
+        route : `/products/${product.name}`,
+        payload: product
+      }
+    })
+  },      
+
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -40,34 +51,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    // 'nuxt-use-motion',
   ],
-  // {
-  //   motion: {
-  //     directives: {
-  //       'pop-bottom': {
-  //         initial: {
-  //           scale: 0,
-  //           opacity: 0,
-  //           y: 100
-  //         },
-  //         visible: {
-  //           scale: 1,
-  //           opacity: 1,
-  //           y: 0
-  //         },
-  //       }
-  //     }
-  //   }
-  // },
-
 
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    
     ['nuxt-sass-resources-loader', '@/assets/style/_global.scss'],
   ],
 
