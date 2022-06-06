@@ -13,15 +13,22 @@
 <script>
 export default {
   beforeCreate () {
-    console.log('test5', this.$route)
+    console.log('test6', this.$route)
     console.log('thisRoute', this.$route.params.product)
   },
   data(){
     return { product : this.$route.params.product }
   },
-  head: {
-    // title: this.$route.params.product,
-    title: "ELZA",
+  head(){
+    return { 
+      title: this.$route.params.product,
+      meta:[
+        { hid: 'og-image', property: 'og:image',
+          content: 'https://bombeldevelopment.netlify.app/img/menu/elza.webp'
+        },
+      ]
+    }
+    // title: "ELZA",
   }
   // head() {
   //   return { 
