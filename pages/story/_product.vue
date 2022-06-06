@@ -12,38 +12,24 @@
 
 <script>
 export default {
-  // name: 'pageProduct',
-  data(){
-    return { product: '' }
+  beforeCreate () {
+    console.log('thisRoute', this.$route)
+    console.log('thisRoute', this.$route.params.product)
   },
-  async asyncData({ params }) {
-    const product = params.product
-    return { product }
+  data(){
+    return { product : this.$route.params.product }
   },
   head() {
-    if(this.product){
-      return { 
-        title: this.product,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Home page description'
-          }
-        ],
-      }     
-    }else{ 
-      return { 
-        title: "Produkt",
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Home page description'
-          }
-        ],
-      }     
-    }
+    return { 
+      title: this.$route.params.product,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Home page description'
+        }
+      ],
+    } 
   },
  
 }

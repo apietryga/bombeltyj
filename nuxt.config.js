@@ -10,7 +10,6 @@ export default {
         payload: product
       }
     })
-    // routes : products.map( product => { return `/story/${product.name}` })
   },      
 
 
