@@ -41,6 +41,12 @@ export default {
       return products.find(item => item.name.toLowerCase() === name.toLowerCase())
     }
   },
+   mounted(){
+    // console.log("pageProduct mounted")
+    const routes = products.map( product => { return `/products/${product.name}` })
+    console.log( "routes", routes )
+
+  },
   // mounted(){
   //   console.log("storyProduct mounted")
   //   // console.log("storyProduct mounted")

@@ -4,12 +4,13 @@ export default {
   ssr: false,
 
   generate : {
-    routes: products.map( product => {
-      return {
-        route : `/products/${product.name}`,
-        payload: product
-      }
-    })
+    // routes: products.map( product => {
+    //   return {
+    //     route : `/products/${product.name}`,
+    //     payload: product
+    //   }
+    // })
+    routes : products.map( product => { return `/products/${product.name}` })
   },      
 
 
