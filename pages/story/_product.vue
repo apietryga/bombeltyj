@@ -13,24 +13,20 @@
 <script>
 export default {
   beforeCreate () {
-    console.log('thisRoute', this.$route)
+    console.log('test4', this.$route)
     console.log('thisRoute', this.$route.params.product)
   },
   data(){
     return { product : this.$route.params.product }
   },
-  head() {
-    return { 
-      title: this.$route.params.product,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Home page description'
-        }
-      ],
-    } 
-  },
+  head: {
+    title: this.$route.params.product,
+  }
+  // head() {
+  //   return { 
+  //     title: this.$route.params.product,
+  //   } 
+  // },
  
 }
 </script>
