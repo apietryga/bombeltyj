@@ -1,13 +1,8 @@
 <template>
   <main>
     <div class="review">
-
-      <router-link to="/">WRÓĆ</router-link>
-      <h3
-        v-motion
-        :initial="{ opacity: 0, x: '-100%'}"
-        :enter="{ opacity: 1, x: 0 }"
-      >Twoja opinia ma znaczenie! 🧐</h3>
+      <nuxtLink to="/">WRÓĆ</nuxtLink>
+      <h3>Twoja opinia ma znaczenie! 🧐</h3>
       <p>
         Będziemy szalenie 😵 wdzięczni, jeśli podzielisz się z nami swoią opinią:
       </p>
@@ -27,12 +22,8 @@
 </template>
 
 <script>
-// import { useMeta } from 'vue-meta'
 export default {
   name: "pageReview",
-  // setup () {
-  //   useMeta({ title: 'OPINIA' })
-  // },
 }
 </script>
 

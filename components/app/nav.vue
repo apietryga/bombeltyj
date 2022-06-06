@@ -20,10 +20,10 @@
         <routerLink to="/">MENU</routerLink>
       </li>
       <li>
-        <routerLink to="/opinia">TWOJA OPINIA</routerLink>
+        <nuxtLink to="/ocena">OCENA</nuxtLink>
       </li>
       <li>
-        <routerLink to="/story">KATALOG BOMBLÓW</routerLink>
+        <nuxtLink to="/story">PRODUKTY</nuxtLink>
       </li>
     </ul>
   </nav>

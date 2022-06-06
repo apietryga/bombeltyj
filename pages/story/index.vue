@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/style/global' as *;
+@use '@/assets/style/global' as *;
 .stories{
   @extend %simpleBox;
   padding:2rem;
