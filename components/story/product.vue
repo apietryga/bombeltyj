@@ -41,6 +41,19 @@ export default {
       return products.find(item => item.name.toLowerCase() === name.toLowerCase())
     }
   },
+  // mounted(){
+  //   console.log("storyProduct mounted")
+  //   // console.log("storyProduct mounted")
+
+  //   const routes = products.map( product => {
+  //     return {
+  //       route : `/products/${product.name}`,
+  //       payload: product
+  //     }
+  //   })
+  //   console.log('routes : ', routes)
+
+  // },
 }
 </script>
 
