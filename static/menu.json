@@ -86,12 +86,12 @@
               "items": [
                 { "name" : "MAŁA",
                   "subname": "250ml",
-                  "img": "img/menu/old_small_cup.webp",
+                  "img": "img/menu/small_cup.webp",
                   "price": "10zł"
                 },
                 { "name" : "DUŻA",
                   "subname": "500ml",
-                  "img": "img/menu/old_big_cup.webp",
+                  "img": "img/menu/big_cup.webp",
                   "price": "15zł"
                 }
               ]
