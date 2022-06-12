@@ -1,7 +1,7 @@
 import products from './static/products.json';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  // ssr: false,
 
   generate : {
     routes: products.map( product => {
