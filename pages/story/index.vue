@@ -29,6 +29,16 @@ export default {
   // setup () {
   //   useMeta({ title: 'STORY' })
   // },
+  head: {
+    title: 'Story page',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
+      }
+    ],
+  }
 }
 </script>
 
