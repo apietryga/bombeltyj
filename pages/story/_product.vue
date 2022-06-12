@@ -12,10 +12,10 @@
 
 <script>
 export default {
-  beforeCreate () {
-    console.log('test6', this.$route)
-    console.log('thisRoute', this.$route.params.product)
-  },
+  // beforeCreate () {
+  //   console.log('test6', this.$route)
+  //   console.log('thisRoute', this.$route.params.product)
+  // },
   data(){
     return { product : this.$route.params.product }
   },

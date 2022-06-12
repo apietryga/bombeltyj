@@ -36,7 +36,10 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Home page description'
-      }
+      },
+      { hid: 'og-image', property: 'og:image',
+        content: 'https://aws.dqlwz1fz4ump3.amplifyapp.com/img/menu/elza.png'
+      },
     ],
   }
 }
