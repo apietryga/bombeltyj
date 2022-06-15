@@ -7,5 +7,5 @@ Front-end for Bombel Tyj Restaurant.
 
 
 ## Migrate from VUE to Nuxt
-  1. NUXT AWS TEST 3
+  1. NUXT AWS TEST 4
   

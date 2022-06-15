@@ -10,7 +10,8 @@ $borderSize: calc($size/3);
 
 @font-face {
   font-family: "Bubbleboddy Neue";
-  src: url("~assets/fonts/bubblebody.woff2") format("woff2");
+  // src: url("~assets/fonts/bubblebody.woff2") format("woff2");
+  src: url("/fonts/bubblebody.woff2") format("woff2");
   font-display: block;
 }
 
