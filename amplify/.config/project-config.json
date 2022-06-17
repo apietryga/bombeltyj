@@ -1,0 +1,17 @@
+{
+  "projectName": "bombeltyj",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "vue",
+    "config": {
+      "SourceDir": ".",
+      "DistributionDir": ".nuxt",
+      "BuildCommand": "npm run build",
+      "StartCommand": "npm run start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

@@ -4,12 +4,13 @@ export default {
   // ssr: false,
 
   generate : {
-    routes: products.map( product => {
-      return {
-        route : `/story/${product.name}`,
-        payload: product
-      }
-    })
+    generate: { fallback: '404.html' }
+    // routes: products.map( product => {
+    //   return {
+    //     route : `/story/${product.name}`,
+    //     payload: product
+    //   }
+    // })
   },      
 
 
@@ -56,7 +57,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
     ['nuxt-sass-resources-loader', '@/assets/style/_global.scss'],
   ],
 
