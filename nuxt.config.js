@@ -63,5 +63,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  /*
+   ** importing a custom loader. this will overwrite the default loader
+   */
+  loading: '~/components/app/loader.vue'
 }

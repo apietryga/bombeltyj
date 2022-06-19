@@ -59,6 +59,13 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
 
 a{
   text-decoration:none;
+  color:inherit;
+  // &:active{
+  //   color:$pink1;
+  // }
+  // &:hover{
+  //   color:$pink2;
+  // }
 
 }
 

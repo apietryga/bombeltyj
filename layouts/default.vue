@@ -2,7 +2,7 @@
   <div class="wrapper">
     <appNav />
       <transition name="home" >
-        <Nuxt />
+        <Nuxt class="mainComponent" />
       </transition>
     <appFooter />
   </div>
@@ -27,7 +27,7 @@ body{
   @include linearGradient($pink1, $pink1, $bgColor);
   min-height:100vh;
   font-family: $firstFont !important;
-  #app {
+  #__nuxt {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
