@@ -4,6 +4,7 @@
       "name": "MENU",
       "items":[
         { "name": "WYBIERZ BAZĘ",
+          "subname": "MAX 2",
           "s_name": "base",
           "items": [
             { "name": "HERBATA",
@@ -27,15 +28,13 @@
                 { "name": "MATCHA" },
                 { "name": "KOKOS" },
                 { "name": "KARMEL" },
-                { "name": "TRUSKAWKA" },
-                { "name": "MANGO" },
-                { "name": "WIŚNIA" },
-                { "name": "MALINA" }
+                { "name": "TRUSKAWKA" }
               ]
             }
           ]
         },
         { "name": "WYBIERZ KULKI",
+          "subname": "MAX 2",
           "s_name": "kulki",
           "items": [
             { "name": "OWOCOWE",
@@ -48,15 +47,13 @@
                 { "name": "KIWI" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "JAGODA" },
-                { "name": "ALOES", "subname": "(miąższ)" },
                 { "name": "LICZI" }
               ]
             },
             { "name": "DESEROWE",
               "items":[
                 { "name": "KARMEL", "subname": "(żelki)" },
-                { "name": "KAWA", "subname": "(żelki)" },
-                { "name": "KOKOS" }
+                { "name": "KOKOS", "subname": "(kawałki)" }
               ]
             }            
           ]
@@ -112,8 +109,8 @@
                     { "name": "KULKI JAGODA",
                       "ico": "jagoda"
                     },
-                    { "name": "KULKI ALOES",
-                      "ico": "aloes"
+                    { "name": "KULKI WIŚNIA",
+                      "ico": "wiśnia"
                     }
                   ]
                 }

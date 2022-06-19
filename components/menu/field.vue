@@ -15,7 +15,7 @@
         <div class="imgNameField">
           <appIcon :values="values" v-if="depth > 3" />
           {{values.name}}
-          <span v-if="values.subname">&nbsp;{{values.subname}}</span>
+          <span v-if="values.subname" class="subname">&nbsp;{{values.subname}}</span>
         </div>
       </b>
     </dt>
@@ -171,6 +171,9 @@ dl{
         }
       }
     }
+  }
+  .subname{
+    font-family: $secondFont;
   }
 }
 .d0{
