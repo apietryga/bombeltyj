@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/style/global' as *; // :TODO:
+// @use '../../assets/style/global' as *; // :TODO:
 .el{
   border:.3rem solid $pink4;
   border-radius:.7rem;

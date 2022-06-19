@@ -2,7 +2,7 @@
   { "name": "ELZA",
     "class": "recommendedIMG",
     "img": "img/menu/elza.webp",
-    "desc": " Opis Elzy ",
+    "desc": "Swoją delikatną konsystencją i wyrazistym smakiem Elza zapisała się na stałe na bomblowym menu.",
     "tails": [
       { "name": "MLEKO TRUSKAWKA",
         "ico": "truskawka"

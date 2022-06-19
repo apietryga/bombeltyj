@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *;
   $loaderSize: 8em;
   $borderSize: 15px;
   $animationSpeed: 3s;

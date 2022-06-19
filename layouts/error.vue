@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../assets/style/global' as *; // :TODO: make it globally !! 
+// @use '../assets/style/global' as *; // :TODO: make it globally !! 
 
 .error {
   text-align: center;

@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/style/global' as *;
+// @use '../assets/style/global' as *;
 .review{
     @extend %simpleBox;
     padding:2rem;

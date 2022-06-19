@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../assets/style/global' as *; // :TODO: make it globally !! 
+// @use '../assets/style/global' as *; // :TODO: make it globally !! 
 // animations
 .home-enter-active, .home-leave-active { transition: opacity .5s; }
 .home-enter, .home-leave-active { opacity: 0; }

@@ -9,10 +9,7 @@
         </p>
       </header>
       <div class="comments">
-        :TODO: FB COMMENTS HERE
-        <!-- <fb-comment 
-          url="https://www.businessinsider.com/personal-finance/lost-money-following-bad-investing-advice-youtube-2022-6" 
-        /> -->
+        <fbComments />
       </div>
     </section>
   </div>
@@ -57,14 +54,11 @@ export default {
       display:flex;
       flex-wrap: wrap;
       p{
-        border:2px dashed red;
+        padding:1rem;
         flex:1;
       }
     }
-    // display:flex;
-    border:2px dashed red;
     .comments{
-      border:2px dashed blue;
       flex:1;
     }
   }

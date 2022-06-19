@@ -1,4 +1,4 @@
-import products from './static/products.json';
+// import products from './static/products.json';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   // ssr: false,
@@ -32,6 +32,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+     { src: '/js/fb-sdk.js' }
     ]
   },
 
@@ -58,8 +61,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     // 'bootstrap-vue/nuxt',
-    ['nuxt-sass-resources-loader', '@/assets/style/_global.scss'],
+    // ['nuxt-sass-resources-loader', '@/assets/style/_global.scss'],
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: ['./assets/style/*.scss']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

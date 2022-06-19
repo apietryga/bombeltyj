@@ -34,7 +34,7 @@ export default { name: "appNav" }
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *;
 nav{
   display:flex;
   justify-content: flex-start;

@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *;
 // NESTED STYLES
 dl{
   margin:0;
