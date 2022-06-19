@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build",
-    "deploy": "git add . && git commit -m 'deploy' && git push heroku heroku"
+    "deploy": "git add . && git commit -m 'deploy' && git push && git push heroku heroku"
   },
   "dependencies": {
     "core-js": "^3.19.3",
