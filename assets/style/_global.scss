@@ -48,7 +48,6 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
   }
 }
 
-
 %simpleBox{
   background-color:rgba(255, 255, 255, 0.4);
   border:3px solid #fff;
@@ -58,11 +57,13 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
 
 }
 
-
 a{
   text-decoration:none;
 
 }
 
-
 *{ box-sizing:border-box; }
+
+body{
+  color: #2c3e50;
+}
