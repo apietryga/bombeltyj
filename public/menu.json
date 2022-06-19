@@ -12,7 +12,6 @@
                 { "name": "ARBUZ" },
                 { "name": "MARAKUJA" },
                 { "name": "MANGO" },
-                { "name": "WIŚNIA" },
                 { "name": "WINOGRONO" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "LICZI" },
@@ -45,15 +44,13 @@
                 { "name": "KIWI" },
                 { "name": "BRZOSKWINIA" },
                 { "name": "JAGODA" },
-                { "name": "ALOES", "subname": "(miąższ)" },
                 { "name": "LICZI" }
               ]
             },
             { "name": "DESEROWE",
               "items":[
                 { "name": "KARMEL", "subname": "(żelki)" },
-                { "name": "KAWA", "subname": "(żelki)" },
-                { "name": "KOKOS" }
+                { "name": "KOKOS", "subname": "(kawałki kokosa)" }
               ]
             }            
           ]
@@ -64,7 +61,7 @@
             {
               "name": "SYROP",
               "items": [
-                {"name": "SŁONY KARMEL"},
+                {"name": "KARMEL"},
                 {"name": "ORZECH"},
                 {"name": "CZEKOLADA"},
                 {"name": "BIAŁA CZEKOLADA"}
@@ -109,7 +106,7 @@
                     { "name": "KULKI JAGODA",
                       "ico": "jagoda"
                     },
-                    { "name": "KULKI ALOES",
+                    { "name": "KULKI WIŚNIA",
                       "ico": "wiśnia"
                     }
                   ]
