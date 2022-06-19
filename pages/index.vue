@@ -1,6 +1,7 @@
 
 <template>
   <main>
+    test 1
     <menuField :values="data" />
   </main>
 </template>
