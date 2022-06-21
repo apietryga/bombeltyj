@@ -9,7 +9,7 @@
         <p class="adress"> Rybnik, Sobieskiego 13 </p>
       </a>
     </div>
-    <input type="checkbox" id="toggler" >
+    <!-- <input type="checkbox" id="toggler" >
     <label for="toggler">
       <div></div>
       <div></div>
@@ -20,12 +20,12 @@
         <routerLink to="/">MENU</routerLink>
       </li>
       <li>
-        <nuxtLink to="/ocena">OCENA</nuxtLink>
+        <nuxtLink to="/opinie">OPINIE</nuxtLink>
       </li>
       <li>
         <nuxtLink to="/story">PRODUKTY</nuxtLink>
       </li>
-    </ul>
+    </ul> -->
   </nav>
 </template>
 

@@ -6,9 +6,9 @@
     <div 
       class="fb-comments"
       ref="comments"
-      data-href="http://devbombeltyj.herokuapp.com/story/ELZA" 
       data-numposts="5"></div>
   </div>
+  <!-- :data-href="location.href"  -->
 </template>
 
 <script>
@@ -17,9 +17,11 @@ export default {
     return {
       script: null,
       loading: true,
+      // dataHref: http://devbombeltyj.herokuapp.com/story/ELZA
     }
   },
   mounted(){
+    // console.log(location)
     this.fbCommentAppend()
     if(typeof FB !== 'undefined'){
       FB.Event.subscribe('xfbml.render', this.fbCommentsRendered)

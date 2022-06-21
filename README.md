@@ -1,7 +1,8 @@
 # BombelTyj
 Front-end for Bombel Tyj Restaurant.
-  - [development](http://dev.bombeltyj.pl/)
-  - [production](https://bombeltyj.pl/)
+  - [HOME](https://www.bombeltyj.pl/)
+  - [PROD](https://www.bombeltyj.pl/)
+  - [DEV](http://devbombeltyj.herokuapp.com/)
 
   
 

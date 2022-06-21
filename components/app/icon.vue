@@ -1,9 +1,10 @@
 <template>
   <div class="icon">
     <slot name="name" v-if="fillByIcon(values.name).src">
-      <img 
-        :src="`${fillByIcon(values.name).src}`" 
-      >
+      <img
+        :src="fillByIcon(values.name).src"
+        @error="imgLoadError"
+      />
     </slot>
     <slot name="name" v-else>
       {{fillByIcon(values.name)}}
@@ -11,6 +12,7 @@
   </div>
 </template>
 <script>
+const fs = (process.server ? require('fs-extra') : null)
 export default {
   props: {
     values: { type: Object, required: true },
@@ -18,9 +20,11 @@ export default {
   methods : {
     fillByIcon( name ){
       if(name == null){return ''}
-      return { src: '/img/icons/'+encodeURI(name.toLowerCase())+'.svg' }
+      return { src: '../../img/icons/'+encodeURI(name.toLowerCase())+'.svg' }
     },
-    err(e){ e.target.src = '/img/icons/bombeltyj.svg' }
+    imgLoadError(e){ 
+      e.target.src = '/img/icons/bombeltyj.svg' 
+    }
   }
 }
 </script>

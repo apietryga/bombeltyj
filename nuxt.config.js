@@ -1,23 +1,6 @@
-// import products from './static/products.json';
+import products from './static/products.json';
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // ssr: false,
 
-  generate : {
-    generate: { fallback: '404.html' }
-    // routes: products.map( product => {
-    //   return {
-    //     route : `/story/${product.name}`,
-    //     payload: product
-    //   }
-    // })
-  },      
-
-
-  // Target: https://go.nuxtjs.dev/config-target
-  // target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Bombel Tyj',
     htmlAttrs: {
@@ -27,53 +10,49 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { ['http-equiv'] : "X-UA-Compatible",  content : "IE=edge" },
-      { hid: 'description', name: 'description', content: 'Śląska bubble tea - oryginalna, smaczna i tradycyjna. Obejżyj se jak łonaczy!' },
+      { hid: 'description', name: 'description', content: 'Bubble Tea Rybnik - śląska wersja tajwańskiego napoju - po naszymu!' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
-    script: [
-     { src: '/js/fb-sdk.js' }
-    ]
+    // script: [
+    //  { src: '/js/fb-sdk.js' }
+    // ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/style/_global.scss'
-  ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  generate : {
+    generate: { fallback: '404.html' },
+    routes: products.map( product => {
+      return {
+        route : `/story/${product.name}`,
+        payload: product
+      }
+    })
+  },
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-  ],
-
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    // 'bootstrap-vue/nuxt',
-    // ['nuxt-sass-resources-loader', '@/assets/style/_global.scss'],
-    '@nuxtjs/style-resources'
-  ],
+  
   styleResources: {
     scss: ['./assets/style/*.scss']
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  components: true,
 
-  /*
-   ** importing a custom loader. this will overwrite the default loader
-   */
-  loading: '~/components/app/loader.vue'
+  loading: '~/components/app/loader.vue',
+
+  buildModules: [
+    "@nuxt/typescript-build",
+  ],
+
+  modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+  ],
+
+  // for @error on imgs
+  render: { 
+    fallback: false
+  }
+
 }

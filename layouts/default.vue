@@ -46,7 +46,7 @@ body{
     nav{
       display:none!important;
     }
-    #app{
+    #__nuxt{
       padding:0;
       min-height:100vh;
       display:flex;
@@ -65,6 +65,15 @@ body{
             flex-wrap:nowrap!important;
           }
         }
+        .imgNameField {
+          padding:.5em;
+        }
+        .d3{ 
+          .imgNameField {
+            padding:0;
+          }          
+        }
+
       }
     }
   }
