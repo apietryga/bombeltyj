@@ -8,12 +8,26 @@
 
 <script>
 export default {
-  name: 'preLoader',
+  data: () => ({
+      loading: false,
+    }),
+    methods: {
+      start() {
+        this.loading = true
+      },
+      finish() {
+        this.loading = false
+      },
+    },
+    
   mounted(){
     this.$nextTick(() => {
       setTimeout(() => { 
       this.$refs.preloader.classList.add("hidding")
-        setTimeout(() => { this.$refs.preloader.style.display = 'none'; }, 500)
+        setTimeout(() => { 
+          this.$refs.preloader.style.display = 'none'; 
+          this.$nuxt.$loading.finish()
+        }, 500)
       }, 500);
     })
   }
@@ -21,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *;
   $loaderSize: 8em;
   $borderSize: 15px;
   $animationSpeed: 3s;

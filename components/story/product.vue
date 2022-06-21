@@ -2,9 +2,9 @@
   <routerLink class="el" :to="'/story/' +  vals.name">
     <figure>
       <div class="heading">
-        <h4 class="title"> {{ vals.name }} </h4>
+        <h4 class="title"> {{ customName ? customName : vals.name }} </h4>
       </div>
-      <div class="content" :class="{ 'horizontal' : horizontal }">
+      <div class="content" :class="{ 'horizontal' : vals.horizontal }">
         <img :src="'/' + vals.img" :alt="vals.name">
         <figcaption>
           <ul>
@@ -22,7 +22,6 @@
 <script>
 import products from '@/static/products.json'; // :TODO: put it to store!
 export default {
-  name: 'storyProduct',
   data(){
     return {
       vals : !this.values ? this.getValuesByName(this.name) : this.values,
@@ -30,22 +29,21 @@ export default {
   },
   props: {
     name: { type: String, default : ":NAME:" },
-    // values: { default: false },
     values: { default: false },
-    horizontal: { type: Boolean, default: false }
+    customName: { type: String|Boolean, default: false }
   },
   methods:{
     getValuesByName(name){
-      // console.log("NAME : ", name)
-      // return this.$products.find(item => item.name.toLowerCase() === name.toLowerCase())
-      return products.find(item => item.name.toLowerCase() === name.toLowerCase())
+      const vals = products.find(item => item.name.toLowerCase() === name.toLowerCase())
+      this.$emit("desc", vals.desc)
+      return vals
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *; // :TODO:
 .el{
   border:.3rem solid $pink4;
   border-radius:.7rem;
@@ -58,7 +56,6 @@ export default {
     flex-direction:column;
     align-items:center;
     justify-content: center;
-    width:fit-content;
     .heading{
       top:-.3rem;
       left:-.3rem;
@@ -73,23 +70,18 @@ export default {
       }
     }
     .content{
-      @media (max-width:768px){
-        img{
-          width:250px;
-          height:200px;
-        }
-        &.horizontal{
-          img{
-            width:125px;
-            height:200px;            
-          }
-        }
+      img{
+        width:250px;
+        height:200px;
       }
-      
       &.horizontal{
         display:flex;
         flex-direction:row-reverse;
         align-items:center;
+        img{
+          width:175px;
+          height:250px;
+        }
       }
       ul{
         list-style:none;

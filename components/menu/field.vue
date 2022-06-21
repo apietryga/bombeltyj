@@ -60,8 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-@use '../../assets/style/global' as *;
-// NESTED STYLES
 dl{
   margin:0;
   &.has-submenu {
@@ -162,7 +160,7 @@ dl{
         img{
           &.maa{
             width:4em;
-            height:5em;
+            height:6em;
           }
           &.dua{
             width:4em;
@@ -172,8 +170,12 @@ dl{
       }
     }
   }
-  .subname{
-    font-family: $secondFont;
+  .d2 > dt > b > .imgNameField {
+    flex-direction: column;
+    align-items: start;
+    > .subname{
+      font-family: $secondFont;
+    }
   }
 }
 .d0{

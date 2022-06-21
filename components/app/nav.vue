@@ -20,7 +20,7 @@
         <routerLink to="/">MENU</routerLink>
       </li>
       <li>
-        <nuxtLink to="/ocena">OCENA</nuxtLink>
+        <nuxtLink to="/opinie">OPINIE</nuxtLink>
       </li>
       <li>
         <nuxtLink to="/story">PRODUKTY</nuxtLink>
@@ -34,7 +34,7 @@ export default { name: "appNav" }
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/style/global' as *;
+// @use '../../assets/style/global' as *;
 nav{
   display:flex;
   justify-content: flex-start;

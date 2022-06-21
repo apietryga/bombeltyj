@@ -7,6 +7,7 @@ $bgColor:#331B62;
 $size: 16px;
 $menuSize:3*$size;
 $borderSize: calc($size/3);
+$borderRadius:7px;
 
 @font-face {
   font-family: "Bubbleboddy Neue";
@@ -51,6 +52,8 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
 %simpleBox{
   background-color:rgba(255, 255, 255, 0.4);
   border:3px solid #fff;
+  // border-width: 50px !important;
+
   border-radius:10px;
   margin:.5em 0;
 
@@ -59,6 +62,13 @@ $secondFont: Avenir, Helvetica, Arial, sans-serif;
 
 a{
   text-decoration:none;
+  color:inherit;
+  // &:active{
+  //   color:$pink1;
+  // }
+  // &:hover{
+  //   color:$pink2;
+  // }
 
 }
 

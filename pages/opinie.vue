@@ -17,6 +17,9 @@
           target="_blank"
         >na Facebooku</a>
       </div>
+
+      <reviewsGoogle />
+
     </div>
   </main>
 </template>
@@ -28,7 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/style/global' as *;
 .review{
     @extend %simpleBox;
     padding:2rem;

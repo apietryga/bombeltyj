@@ -2,21 +2,37 @@
   <main>
     <div class="stories">
       <router-link to="/">WRÓĆ</router-link>
-      <h2>STORIES</h2>
-
+      <h2>NAJLEPSZE PRODUKTY</h2>
 
       <section>
-        <h3>IDOM!</h3>
-        <p>
-          <routerLink to="/story/ELZA" >ELZA</routerLink>
-          z
-          <routerLink to="/story/FRIDA" >Fridom</routerLink>
-        </p>
-
+        <header>
+          <h3>Ktoś to musi kontrolować:</h3>
+        </header>
+        <div class="content">
+          <storyProduct name="Hajer" />
+        </div>
       </section>
 
-      <storyProduct name="Elza" />
+      <section>
+        <header>
+          <h3>Na ciepłe dni:</h3>
+        </header>
+        <div class="content">
+          <storyProduct name="Kawa mrożona" />
+          <storyProduct name="Matcha mrożona" />
+        </div>
+      </section>
 
+      <section>
+        <header>
+          <h3>Zawsze dobrze wejdą: </h3>
+        </header>
+        <div class="content">
+            <storyProduct name="Elza" />
+            <span>z</span>
+            <storyProduct name="Frida" customName="FRIDOM" />
+        </div>
+      </section>
 
     </div>    
   </main>
@@ -46,12 +62,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/style/global' as *;
+// @use '@/assets/style/global' as *;
 .stories{
   @extend %simpleBox;
-  padding:2rem;
-}
-.products{
-  border:2px dashed blue;
+  padding:.5rem;
+  h2{
+    margin:.5rem;
+  }
+  section{
+    margin-bottom:3rem;
+    header h3{
+      margin: .5rem;
+    }
+    .content{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content: space-around;
+      > * {
+        justify-content: center;
+      }
+      span{
+        font-size:3rem;
+        text-align:center;
+        @media (max-width:768px){
+          width:100%;
+          margin:0;
+          flex:none;
+        }
+      }
+    }
+  }
+
 }
 </style>
