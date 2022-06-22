@@ -1,0 +1,84 @@
+[
+  { "name": "ELZA",
+    "class": "recommendedIMG",
+    "img": "img/menu/elza.webp",
+    "desc": "Swoją delikatną konsystencją i wyrazistym smakiem Elza zapisała się na stałe na bomblowym menu.",
+    "tails": [
+      { "name": "MLEKO TRUSKAWKA",
+        "ico": "truskawka"
+      },
+      { "name": "KULKI JOGURT",
+        "ico": "JOGURT"
+      },
+      { "name": "SYROP SŁONY KARMEL",
+        "ico": "KARMEL"
+      }
+    ]
+  },
+  { "name": "FRIDA",
+    "class": "recommendedIMG",
+    "img": "img/menu/frida.webp",
+    "desc": " Opis Fridy ",
+    "tails": [
+      { "name": "MLEKO KAWA",
+        "ico": "kawa"
+      },
+      { "name": "KULKI KARMEL",
+        "ico": "KARMEL"
+      },
+      { "name": "SYROP BIAŁA CZEKOLADA",
+        "ico": "biała czekolada"
+      }
+    ]
+  },
+  { "name": "KAWA MROŻONA",
+    "class": "recommendedIMG",
+    "img": "img/menu/new_kawa_mrozona.webp",
+    "horizontal" : true,
+    "desc": " Opis Kawy mrożonej ",
+    "tails": [
+      { "name": "KOSTKI LODU",
+        "ico": "lód"
+      },
+      { "name": "SPIENIONE MLEKO",
+        "ico": "mleko"
+      },
+      { "name": "ESPRESSO",
+        "ico": "kawa"
+      }
+    ]
+  },
+  { "name": "MATCHA MROŻONA",
+    "class": "recommendedIMG",
+    "img": "img/menu/new_matcha_mrozona.webp",
+    "desc": " Opis matchy mrożonej ",
+    "horizontal" : true,
+    "tails": [
+      { "name": "KOSTKI LODU",
+        "ico": "lód"
+      },
+      { "name": "SPIENIONE MLEKO",
+        "ico": "mleko"
+      },
+      { "name": "MATCHA",
+        "ico": "matcha"
+      }
+    ]
+  },
+  { "name": "HAJER",
+    "class": "recommendedIMG",
+    "img": "img/menu/hajer.webp",
+    "desc": " Opis Hajera ",
+    "tails": [
+      { "name": "HERBATA WINOGRONO",
+        "ico": "winogrono"
+      },
+      { "name": "KULKI JAGODA",
+        "ico": "jagoda"
+      },
+      { "name": "KULKI WIŚNIA",
+        "ico": "wiśnia"
+      }
+    ]
+  }
+]
