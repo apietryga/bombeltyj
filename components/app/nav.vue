@@ -34,7 +34,6 @@ export default { name: "appNav" }
 </script>
 
 <style lang="scss" scoped>
-// @use '../../assets/style/global' as *;
 nav{
   display:flex;
   justify-content: flex-start;
@@ -44,7 +43,6 @@ nav{
   margin-top:0;
   border-radius: 0 0 1rem 1rem;
   border-width: 0 0 3px 0;
-  
   background: linear-gradient(transparent, rgba(255, 255, 255, 0.4));
   img{
     height:4rem;
