@@ -14,7 +14,7 @@
         <img src="/bombeltyj_logo.svg" alt="bombeltyj on web">
       </a>
     </div>
-    <p> &copy; Bombel Tyj 2022 </p>
+    <p> &copy; Bombel Tyj 2022. </p>
   </footer>
 </template>
 

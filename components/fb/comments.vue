@@ -39,11 +39,11 @@ export default {
       this.script.defer = true
       this.script.async = true
       document.head.appendChild(this.script)
-      if(window?.FB){
-        window.FB?.XFBML.parse()
-      }else{
-        this.loading = false
-      }
+      // if(window?.FB){
+      //   window.FB?.XFBML.parse()
+      // }else{
+      //   this.loading = false
+      // }
     }
   }
 }
