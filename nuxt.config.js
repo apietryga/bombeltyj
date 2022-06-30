@@ -48,6 +48,8 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
+    // sitemap always at end of this arr
+    '@nuxtjs/sitemap',
   ],
 
   // for @error on imgs
