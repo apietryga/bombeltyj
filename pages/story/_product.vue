@@ -1,6 +1,5 @@
 <template>
   <div class="product">
-    <nuxtLink to="/story">wróć</nuxtLink>
     <section>
       <header>
         <storyProduct :name="product" @desc="getDesc" />
@@ -56,7 +55,13 @@ export default {
       p{
         padding:1rem;
         flex:1;
+        @extend %simpleBox;
       }
+
+      @media(max-width:768px){
+        a{flex:1;}
+      }
+
     }
     .comments{
       flex:1;
