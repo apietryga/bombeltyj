@@ -74,6 +74,32 @@ body{
           }          
         }
 
+        .maa{
+          height:4em;
+          width:3em;
+        }
+        .dua{
+          height:4em;
+          width:3em;
+        }
+        .REKOMENDOWANE{
+          flex-direction: row;
+          a{
+            flex:1;
+            figure > .content > img{
+              height:6em;          
+              width:9em;
+            }
+          }
+        }
+        .SEZONOWE a{
+          flex:1;
+          figure > .content > img{
+            height:6em;          
+            width:6em;
+          }
+        }
+
       }
     }
   }

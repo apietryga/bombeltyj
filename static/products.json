@@ -34,7 +34,6 @@
   { "name": "KAWA MROŻONA",
     "class": "recommendedIMG",
     "img": "img/menu/new_kawa_mrozona.webp",
-    "horizontal" : true,
     "desc": " Opis Kawy mrożonej ",
     "tails": [
       { "name": "KOSTKI LODU",
@@ -52,7 +51,6 @@
     "class": "recommendedIMG",
     "img": "img/menu/new_matcha_mrozona.webp",
     "desc": " Opis matchy mrożonej ",
-    "horizontal" : true,
     "tails": [
       { "name": "KOSTKI LODU",
         "ico": "lód"

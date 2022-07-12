@@ -45,11 +45,11 @@ export default {
 <style lang="scss" scoped>
 // @use '../../assets/style/global' as *; // :TODO:
 .el{
-  border:.3rem solid $pink4;
-  border-radius:.7rem;
+  border:.3em solid $pink4;
+  border-radius:.7em;
   display:inline-block;
   background: rgba(255,188,219,.5);
-  margin:.5rem;
+  margin:.5em;
   figure{
     margin:0;
     display:flex;
@@ -70,14 +70,15 @@ export default {
       }
     }
     .content{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
       img{
         width:250px;
         height:200px;
       }
       &.horizontal{
-        display:flex;
         flex-direction:row-reverse;
-        align-items:center;
         img{
           width:175px;
           height:250px;
