@@ -78,5 +78,38 @@
         "ico": "wiśnia"
       }
     ]
+  },
+  { "name": "OMA",
+    "class": "recommendedIMG",
+    "img": "img/menu/hajer.webp",
+    "desc": "",
+    "tails": [
+      { "name": "LODY WANILIOWE",
+        "ico": "wanilia"
+      },
+      { "name": "SYROP CZEKOLADA",
+        "ico": "czkolada"
+      },
+      { "name": "KULKI KOKOS",
+        "ico": "kokos"
+      }
+    ]    
+  },
+  { "name": "BAJTEL",
+    "class": "recommendedIMG",
+    "img": "img/menu/hajer.webp",
+    "desc": "",
+    "tails": [
+      { "name": "LODY WANILIOWE",
+        "ico": "wanilia"
+      },
+      { "name": "KOLKI JAGODA",
+        "ico": "jagoda"
+      },
+      { "name": "KULKI TRUSKAWKA",
+        "ico": "truskawka"
+      }
+    ]    
+
   }
 ]
