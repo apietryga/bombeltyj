@@ -69,6 +69,7 @@ nav{
     display:none
   }
   .links{
+    z-index:2;
     flex:1;
     display:flex;
     justify-content: flex-end;

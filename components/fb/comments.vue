@@ -21,7 +21,6 @@ export default {
     }
   },
   mounted(){
-    // console.log(location)
     this.fbCommentAppend()
     if(typeof FB !== 'undefined'){
       FB.Event.subscribe('xfbml.render', this.fbCommentsRendered)

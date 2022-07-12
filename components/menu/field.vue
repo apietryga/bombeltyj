@@ -5,7 +5,6 @@
         <div class="imgField">
           <img :src="values.img" :alt="values.name" :class="values.class || escapeSpecialChars(values.name)">
         </div>
-        <!-- <div v-for="tail of values.tails" :key="tail" class="imgNameField"> -->
         <div v-for="(tail, index) of values.tails" :key="index" class="imgNameField">
           <appIcon :values="{name: tail.ico}" />
           <span>{{tail.name}}</span>
@@ -19,12 +18,9 @@
         </div>
       </b>
     </dt>
-    <!-- <div :class="'item-body '+values?.name?.toLowerCase()" v-if="values.items"> -->
-    <div class="item-body" v-if="values.items">
-      <!-- <dd v-for="(subItems, index) of values.items" :key="subItems.name"> -->
+    <div class="item-body" v-if="values.items" :class="values.name">
       <dd v-for="(subItems) of values.items" :key="values.name+'_i_'+subItems.name">
         <menuField :values="subItems" :depth="depth+1" :key="values.name+'_'+subItems.name" />
-        <!-- <menuField :values="subItems" :depth="depth+1" /> -->
         <div v-if="subItems.price" >
           <div> {{subItems.name}} </div>
           <div class="subPrice"> {{subItems.subname}} </div>
@@ -34,21 +30,25 @@
         </div>
       </dd>
     </div>
+    <!-- <div v-if="typeof values == 'string'">
+      <storyProduct :name="values" />
+    </div> -->
+    <storyProduct :name="values" v-if="typeof values == 'string'" class="has-submenu latest d-3" />
   </dl>
 </template>
 
 <script>
 export default {
   props: {
-    values: { type: Object, required: true },
+    values: { type: Object | String, required: true },
     depth: { type: Number, default: 0 },
   },
   methods:{
     getClass(item){
       if(item.class) return item.class
+      if(typeof item == 'string') return 'stringdl'
       if(!item.items) return
       if(!item.items[0].items) return 'has-submenu latest d'+this.depth
-      // if(item.name) return 'has-submenu d'+this.depth+' '+item.name.toLowerCase()
       return 'has-submenu d'+this.depth
     },
     escapeSpecialChars(str) {
@@ -158,6 +158,7 @@ dl{
           text-align:center;
         }
         img{
+          max-width:100%;
           &.maa{
             width:4em;
             height:6em;
@@ -175,6 +176,23 @@ dl{
     align-items: start;
     > .subname{
       font-family: $secondFont;
+    }
+  }
+  > a{
+    display:block !important;
+    margin:0 !important;
+
+  }
+  &.stringdl{
+    flex:1;
+    display:flex;
+    justify-content: center;
+  }
+  .SEZONOWE{
+    flex-direction: row !important;
+    flex-wrap:nowrap !important;
+    img{
+      max-width:100%;
     }
   }
 }

@@ -18,7 +18,7 @@ export default {
   //   this.$axios.$get("https://mybusiness.googleapis.com/v4/accounts/Bombel+Tyj/locations/@50.0970013,18.5409088,17z/reviews")
   //   .then((response) => {
       // console.log(response)
-      console.log("response")
+      //console.log("response")
   //     this.reviews = response.data;
   //   });
   // get google reviews
