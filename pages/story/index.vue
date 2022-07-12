@@ -1,13 +1,19 @@
 <template>
   <main>
     <div class="stories">
-      <router-link to="/">WRÓĆ</router-link>
       <h2>NAJLEPSZE PRODUKTY</h2>
 
       <section>
         <header>
-          <h3>Ktoś to musi kontrolować:</h3>
+          <h3>NOWOŚCI!</h3>
         </header>
+        <div class="content">
+            <storyProduct name="Oma" />
+            <storyProduct name="Bajtel" />
+        </div>
+      </section>
+
+      <section>
         <div class="content">
           <storyProduct name="Hajer" />
         </div>

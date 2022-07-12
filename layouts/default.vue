@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <appNav />
+      <appBreadCrumb />
       <transition name="home" >
         <Nuxt class="mainComponent" />
       </transition>

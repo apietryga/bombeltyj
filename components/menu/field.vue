@@ -19,7 +19,7 @@
       </b>
     </dt>
     <div class="item-body" v-if="values.items" :class="values.name">
-      <dd v-for="(subItems) of values.items" :key="values.name+'_i_'+subItems.name">
+      <dd v-for="(subItems) of values.items">
         <menuField :values="subItems" :depth="depth+1" :key="values.name+'_'+subItems.name" />
         <div v-if="subItems.price" >
           <div> {{subItems.name}} </div>
@@ -30,9 +30,6 @@
         </div>
       </dd>
     </div>
-    <!-- <div v-if="typeof values == 'string'">
-      <storyProduct :name="values" />
-    </div> -->
     <storyProduct :name="values" v-if="typeof values == 'string'" class="has-submenu latest d-3" />
   </dl>
 </template>
