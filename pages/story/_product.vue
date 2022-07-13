@@ -2,10 +2,9 @@
   <div class="product">
     <section>
       <header>
-        <storyProduct :name="product" @desc="getDesc" />
-        <p>
-          {{ desc }}
-        </p>
+        <!-- <storyProduct :name="product" @desc="getDesc" /> -->
+        <storyProduct :name="product" />
+        <p>{{ $t(`story.desc.${ product }`) }}</p>
       </header>
       <div class="comments">
         <fbComments />
@@ -32,11 +31,11 @@ export default {
       ]
     }
   },
-  methods:{
-    getDesc(desc){
-      this.desc = desc
-    }
-  },
+  // methods:{
+  //   getDesc(desc){
+  //     this.desc = desc
+  //   }
+  // },
   // head() {
   //   return { 
   //     title: this.$route.params.product,

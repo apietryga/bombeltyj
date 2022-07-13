@@ -1,9 +1,9 @@
 <template>
   <main>
     <div class="review">
-      <h3>Twoja opinia ma znaczenie! 🧐</h3>
+      <h3>{{ $t('Twoja opinia ma znaczenie') }}! 🧐</h3>
       <p>
-        Będziemy szalenie 😵 wdzięczni, jeśli podzielisz się z nami swoią opinią:
+        {{ $t('Będziemy szalenie') }} 😵 {{ $t('wdzięczni, jeśli podzielisz się z nami swoią opinią') }}:
       </p>
       <div class="links">
         <reviewsButton href="https://g.page/r/Cc1Y69uPvYbbEB0/review" />

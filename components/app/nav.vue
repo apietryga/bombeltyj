@@ -17,20 +17,49 @@
     </label>
     <ul class="links">
       <li>
-        <routerLink to="/">MENU</routerLink>
+        <routerLink to="/">{{ $t('menu').toUpperCase()}}</routerLink>
       </li>
       <li>
-        <nuxtLink to="/opinie">OPINIE</nuxtLink>
+        <nuxtLink to="/opinie">{{ $t('opinie').toUpperCase()}}</nuxtLink>
       </li>
       <li>
-        <nuxtLink to="/story">PRODUKTY</nuxtLink>
+        <nuxtLink to="/story">{{ $t('produkty').toUpperCase()}}</nuxtLink>
+      </li>
+      <li>
+        <div class="dropDown">
+          <div class="dropDownContent">
+            <button
+              class="langButton"
+              :style="`background-image: url('/img/flags/${ $i18n.localeProperties.code }.svg');`"
+              @click="langDropdown"
+            >{{ $i18n.localeProperties.code }} </button>
+            <div class="dropDownList" v-if="expandLang">
+              <button 
+                v-for="locale of $i18n.localeCodes" 
+                @click="$i18n.setLocale(locale), expandLang = false"
+                class="langButton"
+                :style="`background-image: url('/img/flags/${locale}.svg');`"
+              > {{ locale }} </button>
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default { name: "appNav" }
+export default { 
+  name: "appNav",
+  data(){
+    return { expandLang : false }
+  },
+  methods: {
+    langDropdown(){
+      this.expandLang = !this.expandLang;
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -73,12 +102,40 @@ nav{
     flex:1;
     display:flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    // align-items: flex-end;
+    align-items: center;
     margin:0;
     padding:0;
     list-style:none;
     a{
       margin:.25rem .5rem;
+    }
+    .dropDown{
+      position:relative;
+      width:3rem;
+      height:2rem;
+      .dropDownContent{
+        position:absolute;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        .langButton{
+          text-transform: uppercase;
+          margin:2px 0;
+          border:none;
+          cursor:pointer;
+          background-size:cover;
+          background-position:center;
+          height: 2rem;
+          position:relative;
+          text-shadow: 1px 1px #fff;
+          opacity:.8;
+          width:100%;
+          &:hover{
+            opacity:1;
+          }
+        }
+      }
     }
   }
 }

@@ -1,24 +1,28 @@
 import products from './static/products.json';
 export default {
 
-  head: {
-    title: 'Bombel Tyj',
-    htmlAttrs: {
-      lang: 'pl'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { ['http-equiv'] : "X-UA-Compatible",  content : "IE=edge" },
-      { hid: 'description', name: 'description', content: 'Bubble Tea Rybnik - śląska wersja tajwańskiego napoju - po naszymu!' },
-      { name: 'format-detection', content: 'telephone=no' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    // script: [
-    //  { src: '/js/fb-sdk.js' }
-    // ]
+  head () {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      title: 'Bombel Tyj',
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+        ...i18nHead.htmlAttrs
+      },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { ['http-equiv'] : "X-UA-Compatible",  content : "IE=edge" },
+        { name: 'format-detection', content: 'telephone=no' },
+        { hid: 'description', name: 'description', content: 'Bubble Tea Rybnik - śląska wersja tajwańskiego napoju - po naszymu!' },
+        ...i18nHead.meta
+      ],
+      link: [
+        { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        ...i18nHead.link
+     ]
+    }
   },
 
 
@@ -47,10 +51,40 @@ export default {
 
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/i18n',
     '@nuxtjs/axios',
-    // sitemap always at end of this arr
-    '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap' // sitemap always at the end of this arr
   ],
+    i18n: {
+    locales: [
+      {
+        code: 'sl',
+        name: 'Ślonsko godka',
+        file: 'sl.json',
+      },
+      {
+        code: 'pl',
+        name: 'Polski',
+        file: 'pl.json',
+      },
+      {
+        code: 'ua',
+        name: 'українська',
+        file: 'ua.json',
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json',
+      }
+    ],
+    defaultLocale: 'pl',
+    langDir: '@/assets/lang/',
+    lazy: true,
+    strategy: 'no_prefix',
+    baseUrl: 'https://bombeltyj.pl',
+    silentTranslationWarn: true
+  },
 
   // for @error on imgs
   render: { 

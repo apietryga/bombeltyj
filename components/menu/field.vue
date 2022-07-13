@@ -7,13 +7,16 @@
         </div>
         <div v-for="(tail, index) of values.tails" :key="index" class="imgNameField">
           <appIcon :values="{name: tail.ico}" />
-          <span>{{tail.name}}</span>
+          <span>{{$t(tail.name.toLowerCase())}}</span>
         </div>
       </div>
       <b v-else>
         <div class="imgNameField">
           <appIcon :values="values" v-if="depth > 3" />
-          {{values.name}}
+          <!-- {{$t(values.name)}} -->
+          <!-- {{ values.name.toLowerCase()}}  -->
+          {{$t(values.name.toLowerCase()).toUpperCase()}} 
+          <!-- {{ $t('truskawka')}} -->
           <span v-if="values.subname" class="subname">&nbsp;{{values.subname}}</span>
         </div>
       </b>
@@ -22,7 +25,7 @@
       <dd v-for="(subItems) of values.items">
         <menuField :values="subItems" :depth="depth+1" :key="values.name+'_'+subItems.name" />
         <div v-if="subItems.price" >
-          <div> {{subItems.name}} </div>
+          <div> {{$t(subItems.name.toLowerCase()).toUpperCase()}} </div>
           <div class="subPrice"> {{subItems.subname}} </div>
         </div>
         <div v-if="subItems.price" class="price">
@@ -186,7 +189,9 @@ dl{
     justify-content: center;
   }
   .SEZONOWE{
-    flex-direction: row !important;
+    @media (min-width: 768px) {
+      flex-direction: row !important;
+    }
     flex-wrap:nowrap !important;
     img{
       max-width:100%;

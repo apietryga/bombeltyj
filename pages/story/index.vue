@@ -1,11 +1,11 @@
 <template>
   <main>
     <div class="stories">
-      <h2>NAJLEPSZE PRODUKTY</h2>
+      <h2>{{ $t('najlepsze produkty').toUpperCase() }}</h2>
 
       <section>
         <header>
-          <h3>NOWOŚCI!</h3>
+          <h3>{{ $t('nowości').toUpperCase() }}!</h3>
         </header>
         <div class="content">
             <storyProduct name="Oma" />
@@ -21,7 +21,7 @@
 
       <section>
         <header>
-          <h3>Na ciepłe dni:</h3>
+          <h3>{{ $t('na ciepłe dni').toUpperCase() }}</h3>
         </header>
         <div class="content">
           <storyProduct name="Kawa mrożona" />
@@ -31,11 +31,10 @@
 
       <section>
         <header>
-          <h3>Zawsze dobrze wejdą: </h3>
         </header>
         <div class="content">
             <storyProduct name="Elza" />
-            <span>z</span>
+            <span>{{ $t('z').toUpperCase() }}</span>
             <storyProduct name="Frida" customName="FRIDOM" />
         </div>
       </section>

@@ -1,115 +1,107 @@
 [
-  { "name": "ELZA",
-    "class": "recommendedIMG",
+  { "name": "elza",
+    "class": "recommendedimg",
     "img": "img/menu/elza.webp",
-    "desc": "Swoją delikatną konsystencją i wyrazistym smakiem Elza zapisała się na stałe na bomblowym menu. Delikatne truskawkowe mleko oblane karmelem i wypełnione kokosem podbiją podniebienie nie jednego fana słodkości!",
     "tails": [
-      { "name": "MLEKO TRUSKAWKA",
+      { "name": "mleko truskawka",
         "ico": "truskawka"
       },
-      { "name": "KULKI KOKOS",
+      { "name": "kulki kokos",
         "ico": "kokos"
       },
-      { "name": "SYROP SŁONY KARMEL",
-        "ico": "KARMEL"
+      { "name": "syrop słony karmel",
+        "ico": "karmel"
       }
     ]
   },
-  { "name": "FRIDA",
-    "class": "recommendedIMG",
+  { "name": "frida",
+    "class": "recommendedimg",
     "img": "img/menu/frida.webp",
-    "desc": "Nasza pierwsza kompozycja - od razu wpadła w serca i umysły kawoszy. Najlepszym jej określeniem jest 'kawa i ciastko' - jednocześnie! ",
     "tails": [
-      { "name": "MLEKO KAWA",
+      { "name": "mleko kawa",
         "ico": "kawa"
       },
-      { "name": "KULKI KARMEL",
-        "ico": "KARMEL"
+      { "name": "kulki karmel",
+        "ico": "karmel"
       },
-      { "name": "SYROP BIAŁA CZEKOLADA",
+      { "name": "syrop biała czekolada",
         "ico": "biała czekolada"
       }
     ]
   },
-  { "name": "KAWA MROŻONA",
-    "class": "recommendedIMG",
+  { "name": "kawa mrożona",
+    "class": "recommendedimg",
     "img": "img/menu/new_kawa_mrozona.webp",
-    "desc": "Orzeźwienie i pobudzenie to tylko dodatki do tego smaku. Chcesz go jeszcze bardziej poprawić? Dobierz bomble!",
     "tails": [
-      { "name": "KOSTKI LODU",
+      { "name": "kostki lodu",
         "ico": "lód"
       },
-      { "name": "SPIENIONE MLEKO",
+      { "name": "spienione mleko",
         "ico": "mleko"
       },
-      { "name": "ESPRESSO",
+      { "name": "espresso",
         "ico": "kawa"
       }
     ]
   },
-  { "name": "MATCHA MROŻONA",
-    "class": "recommendedIMG",
+  { "name": "matcha mrożona",
+    "class": "recommendedimg",
     "img": "img/menu/new_matcha_mrozona.webp",
-    "desc": "Idealny wybór dla fanów sproszkowanej herbaty w gorący dzień! Możesz dobrać smakowe kulki jeśli chcesz.",
     "tails": [
-      { "name": "KOSTKI LODU",
+      { "name": "kostki lodu",
         "ico": "lód"
       },
-      { "name": "SPIENIONE MLEKO",
+      { "name": "spienione mleko",
         "ico": "mleko"
       },
-      { "name": "MATCHA",
+      { "name": "matcha",
         "ico": "matcha"
       }
     ]
   },
-  { "name": "HAJER",
-    "class": "recommendedIMG",
+  { "name": "hajer",
+    "class": "recommendedimg",
     "img": "img/menu/hajer.webp",
-    "desc": "Znany i szanowany - Hajer. Chcesz dziesięć procent zniżki? Powiedz przy zamówieniu, że chcesz Hajera z desiątego poziomu!",
     "tails": [
-      { "name": "HERBATA WINOGRONO",
+      { "name": "herbata winogrono",
         "ico": "winogrono"
       },
-      { "name": "KULKI JAGODA",
+      { "name": "kulki jagoda",
         "ico": "jagoda"
       },
-      { "name": "KULKI WIŚNIA",
+      { "name": "kulki wiśnia",
         "ico": "wiśnia"
       }
     ]
   },
-  { "name": "OMA",
-    "class": "recommendedIMG",
+  { "name": "oma",
+    "class": "recommendedimg",
     "img": "img/menu/oma.webp",
-    "desc": "Jak już Omo przijdziesz z Bajtlami - też cosik do Ciebie momy - no powiedz, że nie skusisz się na oblanego czekoladą loda, z kokosowymi bomblami na wiyrchu?",
     "tails": [
-      { "name": "LODY WANILIOWE",
+      { "name": "lody waniliowe",
         "ico": "wanilia"
       },
-      { "name": "SYROP CZEKOLADA",
+      { "name": "syrop czekolada",
         "ico": "czekolada"
       },
-      { "name": "KULKI KOKOS",
+      { "name": "kulki kokos",
         "ico": "kokos"
       }
-    ]    
+    ]
   },
-  { "name": "BAJTEL",
-    "class": "recommendedIMG",
+  { "name": "bajtel",
+    "class": "recommendedimg",
     "img": "img/menu/bajtel.webp",
-    "desc": "W cieplutki wakacyjny dzień, nie ma to jak zjeść loda - a loda z kulkami? Dwukolorowe kule dla każdego chętnego bajtla! Świetna alternatywa dla standardowego Bubble Tea w Bombel Tyju!",
     "tails": [
-      { "name": "LODY WANILIOWE",
+      { "name": "lody waniliowe",
         "ico": "wanilia"
       },
-      { "name": "KOLKI JAGODA",
+      { "name": "kulki jagoda",
         "ico": "jagoda"
       },
-      { "name": "KULKI TRUSKAWKA",
+      { "name": "kulki truskawka",
         "ico": "truskawka"
       }
-    ]    
-
+    ]
   }
 ]

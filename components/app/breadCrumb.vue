@@ -2,7 +2,6 @@
   <div class="level" v-if="this.$route.name != 'index'">
     <div class="level-left">
       <div class="level-item" >
-        <!-- <a class="button is-white" @click="$router.back()">  SMTH </a>-->
         <nuxtLink to="/">BombelTyj</nuxtLink>
       </div>
       <div class="level-item">
@@ -28,7 +27,8 @@ export default {
         const crumb = {}
         crumb.path = item.path
         // crumb.name = this.$i18n.t('route.' + (item.name || item.path))
-        crumb.name = item.name || item.path
+        // crumb.name = item.name || item.path
+        crumb.name = this.$t(item.name.toLowerCase()).toUpperCase() || this.$t(item.path.toLowerCase()).toUpperCase()
 
         // is last item?
         if (i === length - 1) {
@@ -37,14 +37,16 @@ export default {
             crumbs.push({
               path: item.path.replace(/\/:[^/:]*$/, ''),
               // name: this.$i18n.t('route.' + item.name.replace(/-[^-]*$/, ''))
-              name: '' + item.name.replace(/-[^-]*$/, '')
+              // name: '' + item.name.replace(/-[^-]*$/, '')
+              name: '' + this.$t(item.name.replace(/-[^-]*$/, '').toLowerCase()).toUpperCase()
             })
             crumb.path = this.$route.path
             // crumb.name = this.$i18n.t('route.' + this.$route.name, [
             //   crumb.path.match(/[^/]*$/)[0]
             // ])
             // crumb.name = crumb.path.match(/[^/]*$/)[0]
-            crumb.name = decodeURI(crumb.path.match(/[^/]*$/)[0])
+            // crumb.name = decodeURI(crumb.path.match(/[^/]*$/)[0])
+            crumb.name = this.$t(decodeURI(crumb.path.match(/[^/]*$/)[0]).toLowerCase()).toUpperCase()
           }
           crumb.classes = 'is-active'
         }

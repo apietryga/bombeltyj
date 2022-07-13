@@ -2,7 +2,7 @@
   <routerLink class="el" :to="'/story/' +  vals.name">
     <figure>
       <div class="heading">
-        <h4 class="title"> {{ customName ? customName : vals.name }} </h4>
+        <h4 class="title"> {{ $t((customName ? customName : vals.name).toLowerCase()).toUpperCase() }} </h4>
       </div>
       <div class="content" :class="{ 'horizontal' : vals.horizontal }">
         <img :src="'/' + vals.img" :alt="vals.name">
@@ -10,7 +10,7 @@
           <ul>
             <li v-for="(tail, index) of vals.tails" :key="index">
               <appIcon :values="{name: tail.ico}" />
-              <span>{{tail.name}}</span>
+              <span>{{$t(tail.name.toLowerCase()).toUpperCase()}}</span>
             </li>
           </ul>
         </figcaption>
@@ -83,12 +83,15 @@ export default {
           height:250px;
         }
       }
-      ul{
-        list-style:none;
-        margin:0;
-        padding:0 0 1rem 1rem;
-        li{
-          display:flex;
+      figcaption{
+        width:100%;
+        ul{
+          list-style:none;
+          margin:0;
+          padding:0 0 .5rem .5rem;
+          li{
+            display:flex;
+          }
         }
       }
     }
