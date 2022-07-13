@@ -47,6 +47,7 @@ export default {
 
   buildModules: [
     "@nuxt/typescript-build",
+    '@nuxtjs/google-analytics'
   ],
 
   modules: [
@@ -55,7 +56,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap' // sitemap always at the end of this arr
   ],
-    i18n: {
+  
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
+
+  i18n: {
     locales: [
       {
         code: 'sl',
