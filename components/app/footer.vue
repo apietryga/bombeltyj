@@ -1,6 +1,9 @@
 <template>
   <footer>
     <div class="socials">
+      <a href="https://glovoapp.com/pl/pl/rybnik/bombeltyj-ryb/" target="_blank">
+        <img src="/img/socials/glovo.svg" alt="bombeltyj on glovo">
+      </a>
       <a href="https://www.facebook.com/bombeltyj" target="_blank">
         <img src="/img/socials/facebook.svg" alt="bombeltyj on facebook">
       </a>
@@ -31,7 +34,7 @@ footer{
   .socials{
     display:flex;
     flex-wrap:wrap;
-    font-size:.8em;
+    font-size:.6em;
     @extend %simpleBox;      
     font-family:$secondFont;
     justify-content: center;
