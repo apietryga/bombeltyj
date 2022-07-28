@@ -15,6 +15,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: 'Bubble Tea Rybnik - śląska wersja tajwańskiego napoju - po naszymu!' },
         { hid: 'og:image', name: 'og:image', content: process.env.ORIGIN + '/img/og/index.png' },
+        { hid: 'og:image:alt', name: 'og:image:alt', content: 'Bombel Tyj Menu Image' },
       ]
     }
   },
