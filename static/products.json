@@ -122,6 +122,9 @@
     "tails": [
       { "name": "pink matcha",
         "ico": "pink matcha"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
       }
     ]
   }

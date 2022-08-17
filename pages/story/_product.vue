@@ -22,7 +22,6 @@ export default {
     }
   },
   head(){
-    // console.log("BASE_URL: ", this.$store.state.baseUrl);
     return { 
       title: this.$route.params.product,
       meta:[
