@@ -23,7 +23,7 @@
         <nuxtLink to="/opinie">{{ $t('opinie').toUpperCase()}}</nuxtLink>
       </li>
       <li>
-        <nuxtLink to="/story">{{ $t('produkty').toUpperCase()}}</nuxtLink>
+        <nuxtLink to="/story/elza">{{ $t('produkty').toUpperCase()}}</nuxtLink>
       </li>
       <li>
         <div class="dropDown">

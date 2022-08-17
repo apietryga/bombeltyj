@@ -25,10 +25,12 @@
                 { "name": "CZEKOLADA" },
                 { "name": "KAWA" },
                 { "name": "WANILIA" },
-                { "name": "MATCHA" },
                 { "name": "KOKOS" },
                 { "name": "KARMEL" },
-                { "name": "TRUSKAWKA" }
+                { "name": "TRUSKAWKA" },
+                { "name": "MATCHA" },
+                { "name": "BLUE MATCHA" },
+                { "name": "PINK MATCHA" }
               ]
             }
           ]

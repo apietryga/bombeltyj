@@ -2,10 +2,10 @@
   <div class="product">
     <section>
       <header>
-        <!-- <storyProduct :name="product" @desc="getDesc" /> -->
         <storyProduct :name="product" />
         <p>{{ $t(`story.desc.${ product }`) }}</p>
       </header>
+      <storyList />
       <div class="comments">
         <fbComments />
       </div>
@@ -17,11 +17,12 @@
 export default {
   data(){
     return { 
-      product : this.$route.params.product,
+      product : this.$route.params.product ?? 'elza',
       desc: 'OPIS',
     }
   },
   head(){
+    // console.log("BASE_URL: ", this.$store.state.baseUrl);
     return { 
       title: this.$route.params.product,
       meta:[
@@ -31,17 +32,6 @@ export default {
       ]
     }
   },
-  // methods:{
-  //   getDesc(desc){
-  //     this.desc = desc
-  //   }
-  // },
-  // head() {
-  //   return { 
-  //     title: this.$route.params.product,
-  //   } 
-  // },
- 
 }
 </script>
 
@@ -56,11 +46,9 @@ export default {
         flex:1;
         @extend %simpleBox;
       }
-
       @media(max-width:768px){
         a{flex:1;}
       }
-
     }
     .comments{
       flex:1;

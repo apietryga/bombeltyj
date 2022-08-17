@@ -31,7 +31,7 @@
   },
   { "name": "kawa mrożona",
     "class": "recommendedimg",
-    "img": "img/menu/new_kawa_mrozona.webp",
+    "img": "img/menu/kawa_mrozona.webp",
     "tails": [
       { "name": "kostki lodu",
         "ico": "lód"
@@ -46,7 +46,7 @@
   },
   { "name": "matcha mrożona",
     "class": "recommendedimg",
-    "img": "img/menu/new_matcha_mrozona.webp",
+    "img": "img/menu/matcha_mrozona.webp",
     "tails": [
       { "name": "kostki lodu",
         "ico": "lód"
@@ -101,6 +101,27 @@
       },
       { "name": "kulki truskawka",
         "ico": "truskawka"
+      }
+    ]
+  },
+  { "name": "blue matcha",
+    "class": "recommendedimg",
+    "img": "img/menu/blue_matcha.webp",
+    "tails": [
+      { "name": "blue matcha",
+        "ico": "blue matcha"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
+      }
+    ]
+  },
+  { "name": "pink matcha",
+    "class": "recommendedimg",
+    "img": "img/menu/pink_matcha.webp",
+    "tails": [
+      { "name": "pink matcha",
+        "ico": "pink matcha"
       }
     ]
   }

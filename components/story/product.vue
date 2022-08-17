@@ -6,7 +6,7 @@
       </div>
       <div class="content" :class="{ 'horizontal' : vals.horizontal }">
         <img :src="'/' + vals.img" :alt="vals.name">
-        <figcaption>
+        <figcaption v-if="tails">
           <ul>
             <li v-for="(tail, index) of vals.tails" :key="index">
               <appIcon :values="{name: tail.ico}" />
@@ -30,7 +30,8 @@ export default {
   props: {
     name: { type: String, default : ":NAME:" },
     values: { default: false },
-    customName: { type: String|Boolean, default: false }
+    customName: { type: String|Boolean, default: false },
+    tails: { type: Boolean, default: true }
   },
   methods:{
     getValuesByName(name){
