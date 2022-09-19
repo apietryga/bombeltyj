@@ -2,6 +2,7 @@
   <div class="wrapper">
     <appNav />
       <appBreadCrumb />
+      <appClosure />
       <transition name="home" >
         <Nuxt class="mainComponent" />
       </transition>
@@ -12,8 +13,10 @@
 </template>
 
 <script>
+// import Closure from '~/components/app/closure.vue';
 export default {
-  transition: 'home'
+    transition: "home",
+    // components: { Closure }
 }
 </script>
 
