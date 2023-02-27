@@ -1,5 +1,6 @@
 import products from './static/products.json';
 export default {
+  ssr: false,
 
   head () {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
