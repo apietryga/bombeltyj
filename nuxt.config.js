@@ -2,6 +2,9 @@ import products from './static/products.json';
 const main_base_URL =  'https://apietryga.github.io/bombeltyj';
 export default {
   ssr: false,
+  vueuse: {
+    ssrHandlers: true,
+  },
   sitemap: {
       hostname: main_base_URL
   },
