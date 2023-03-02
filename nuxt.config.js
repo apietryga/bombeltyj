@@ -5,6 +5,9 @@ export default {
   vueuse: {
     ssrHandlers: true,
   },
+  router: {
+    base: '/bombeltyj/'
+  },
   sitemap: {
       hostname: main_base_URL
   },
@@ -13,7 +16,7 @@ export default {
   },
 
   head () {
-    const i18nHead = this.$nuxtI18nHead
+    const i18nHead = typeof this.$nuxtI18nHead.constructor === 'function'
             ? this.$nuxtI18nHead({ addSeoAttributes: true })
             : { htmlAttrs: [], meta: [], link: [] }
     return {
