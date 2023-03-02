@@ -16,7 +16,7 @@ export default {
   },
 
   head () {
-    const i18nHead = typeof this.$nuxtI18nHead.constructor === 'function'
+    const i18nHead = typeof this.$nuxtI18nHead === 'function'
             ? this.$nuxtI18nHead({ addSeoAttributes: true })
             : { htmlAttrs: [], meta: [], link: [] }
     return {
