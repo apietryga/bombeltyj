@@ -6,7 +6,10 @@ export default {
     ssrHandlers: true,
   },
   router: {
-    base: '/bombeltyj/'
+    base: '/bombeltyj/',
+  },
+  build: {
+    publicPath: '/bombeltyj/',
   },
   sitemap: {
       hostname: main_base_URL
