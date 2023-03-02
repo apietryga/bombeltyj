@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
   import products from '@/static/products.json'; // :TODO: put it to store!
   export default {
     data () { return { products } },
