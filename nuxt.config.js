@@ -8,9 +8,10 @@ export default {
   router: {
     base: '/bombeltyj/',
   },
-  build: {
-    publicPath: '/bombeltyj/',
+  app:{
+    baseURL: '/bombeltyj/'
   },
+
   sitemap: {
       hostname: main_base_URL
   },
