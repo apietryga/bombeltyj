@@ -1,7 +1,7 @@
 [
   { "name": "elza",
     "class": "recommendedimg",
-    "img": "img/menu/elza.webp",
+    "img": "bombeltyj/img/menu/elza.webp",
     "tails": [
       { "name": "mleko truskawka",
         "ico": "truskawka"
@@ -16,7 +16,7 @@
   },
   { "name": "frida",
     "class": "recommendedimg",
-    "img": "img/menu/frida.webp",
+    "img": "bombeltyj/img/menu/frida.webp",
     "tails": [
       { "name": "mleko kawa",
         "ico": "kawa"
@@ -31,7 +31,7 @@
   },
   { "name": "kawa mrożona",
     "class": "recommendedimg",
-    "img": "img/menu/kawa_mrozona.webp",
+    "img": "bombeltyj/img/menu/kawa_mrozona.webp",
     "tails": [
       { "name": "kostki lodu",
         "ico": "lód"
@@ -46,7 +46,7 @@
   },
   { "name": "matcha mrożona",
     "class": "recommendedimg",
-    "img": "img/menu/matcha_mrozona.webp",
+    "img": "bombeltyj/img/menu/matcha_mrozona.webp",
     "tails": [
       { "name": "kostki lodu",
         "ico": "lód"
@@ -61,7 +61,7 @@
   },
   { "name": "hajer",
     "class": "recommendedimg",
-    "img": "img/menu/hajer.webp",
+    "img": "bombeltyj/img/menu/hajer.webp",
     "tails": [
       { "name": "herbata winogrono",
         "ico": "winogrono"
@@ -76,7 +76,7 @@
   },
   { "name": "oma",
     "class": "recommendedimg",
-    "img": "img/menu/oma.webp",
+    "img": "bombeltyj/img/menu/oma.webp",
     "tails": [
       { "name": "lody waniliowe",
         "ico": "wanilia"
@@ -91,7 +91,7 @@
   },
   { "name": "bajtel",
     "class": "recommendedimg",
-    "img": "img/menu/bajtel.webp",
+    "img": "bombeltyj/img/menu/bajtel.webp",
     "tails": [
       { "name": "lody waniliowe",
         "ico": "wanilia"
@@ -106,7 +106,7 @@
   },
   { "name": "blue matcha",
     "class": "recommendedimg",
-    "img": "img/menu/blue_matcha.webp",
+    "img": "bombeltyj/img/menu/blue_matcha.webp",
     "tails": [
       { "name": "blue matcha",
         "ico": "blue matcha"
@@ -118,7 +118,7 @@
   },
   { "name": "pink matcha",
     "class": "recommendedimg",
-    "img": "img/menu/pink_matcha.webp",
+    "img": "bombeltyj/img/menu/pink_matcha.webp",
     "tails": [
       { "name": "pink matcha",
         "ico": "pink matcha"
