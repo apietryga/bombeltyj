@@ -1,0 +1,131 @@
+[
+  { "name": "elza",
+    "class": "recommendedimg",
+    "img": "img/menu/elza.webp",
+    "tails": [
+      { "name": "mleko truskawka",
+        "ico": "truskawka"
+      },
+      { "name": "kulki kokos",
+        "ico": "kokos"
+      },
+      { "name": "syrop słony karmel",
+        "ico": "karmel"
+      }
+    ]
+  },
+  { "name": "frida",
+    "class": "recommendedimg",
+    "img": "img/menu/frida.webp",
+    "tails": [
+      { "name": "mleko kawa",
+        "ico": "kawa"
+      },
+      { "name": "kulki karmel",
+        "ico": "karmel"
+      },
+      { "name": "syrop biała czekolada",
+        "ico": "biała czekolada"
+      }
+    ]
+  },
+  { "name": "kawa mrożona",
+    "class": "recommendedimg",
+    "img": "img/menu/kawa_mrozona.webp",
+    "tails": [
+      { "name": "kostki lodu",
+        "ico": "lód"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
+      },
+      { "name": "espresso",
+        "ico": "kawa"
+      }
+    ]
+  },
+  { "name": "matcha mrożona",
+    "class": "recommendedimg",
+    "img": "img/menu/matcha_mrozona.webp",
+    "tails": [
+      { "name": "kostki lodu",
+        "ico": "lód"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
+      },
+      { "name": "matcha",
+        "ico": "matcha"
+      }
+    ]
+  },
+  { "name": "hajer",
+    "class": "recommendedimg",
+    "img": "img/menu/hajer.webp",
+    "tails": [
+      { "name": "herbata winogrono",
+        "ico": "winogrono"
+      },
+      { "name": "kulki jagoda",
+        "ico": "jagoda"
+      },
+      { "name": "kulki wiśnia",
+        "ico": "wiśnia"
+      }
+    ]
+  },
+  { "name": "oma",
+    "class": "recommendedimg",
+    "img": "img/menu/oma.webp",
+    "tails": [
+      { "name": "lody waniliowe",
+        "ico": "wanilia"
+      },
+      { "name": "syrop czekolada",
+        "ico": "czekolada"
+      },
+      { "name": "kulki kokos",
+        "ico": "kokos"
+      }
+    ]
+  },
+  { "name": "bajtel",
+    "class": "recommendedimg",
+    "img": "img/menu/bajtel.webp",
+    "tails": [
+      { "name": "lody waniliowe",
+        "ico": "wanilia"
+      },
+      { "name": "kulki jagoda",
+        "ico": "jagoda"
+      },
+      { "name": "kulki truskawka",
+        "ico": "truskawka"
+      }
+    ]
+  },
+  { "name": "blue matcha",
+    "class": "recommendedimg",
+    "img": "img/menu/blue_matcha.webp",
+    "tails": [
+      { "name": "blue matcha",
+        "ico": "blue matcha"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
+      }
+    ]
+  },
+  { "name": "pink matcha",
+    "class": "recommendedimg",
+    "img": "img/menu/pink_matcha.webp",
+    "tails": [
+      { "name": "pink matcha",
+        "ico": "pink matcha"
+      },
+      { "name": "spienione mleko",
+        "ico": "mleko"
+      }
+    ]
+  }
+]
