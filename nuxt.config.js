@@ -1,12 +1,25 @@
 import products from './static/products.json';
+const main_base_URL =  'https://apietryga.github.io/bombeltyj';
 export default {
+  ssr: false,
+  vueuse: {
+    ssrHandlers: true,
+  },
+  sitemap: {
+      hostname: main_base_URL
+  },
+  env: {
+      main_base_URL
+  },
 
   head () {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    const i18nHead = this.$nuxtI18nHead
+            ? this.$nuxtI18nHead({ addSeoAttributes: true })
+            : { htmlAttrs: [], meta: [], link: [] }
     return {
       title: 'Bombel Tyj',
       htmlAttrs: {
-        lang: this.$i18n.locale,
+        lang: this.$i18n?.locale,
         ...i18nHead.htmlAttrs
       },
       meta: [
@@ -54,7 +67,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/i18n',
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap' // sitemap always at the end of this arr
+    //'@nuxtjs/sitemap' // sitemap always at the end of this arr
   ],
   
   googleAnalytics: {
